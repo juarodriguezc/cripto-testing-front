@@ -88,7 +88,7 @@ export default {
     store.dispatch("restartVals");
     function login(json) {
       store
-        .dispatch("login", { json, domain:this.domain+"/auth/login" })
+        .dispatch("login", { json, domain: this.domain + "/auth/login" })
         .then(() => {
           this.$router.push("/");
         })
