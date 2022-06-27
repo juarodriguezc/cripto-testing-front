@@ -591,34 +591,36 @@
 import navbar from "@/components/navbar";
 import axios from "axios";
 
-import msgSuccess from "@/components/apliAdopcion/msgSuccessApli"
+import msgSuccess from "@/components/apliAdopcion/msgSuccessApli";
 
-import { useStore } from 'vuex'
-import { computed } from 'vue'
+import pets from "../../data/pets.js";
+
+import { useStore } from "vuex";
+import { computed } from "vue";
 
 var datos = "";
 var valor = 1;
 export default {
-  setup(){
+  setup() {
     //VueX config
-    const store = useStore()
+    const store = useStore();
     //States
-    const msgVisible = computed(() => store.state.addFormApl.msgVisible)
-    const params = computed(() => store.state.filterPets.filter)
+    const msgVisible = computed(() => store.state.addFormApl.msgVisible);
+    const params = computed(() => store.state.filterPets.filter);
     //Functions
     function updateFilter(params) {
-      store.dispatch("filterPets/updateFilter",params);
+      store.dispatch("filterPets/updateFilter", params);
     }
     function deleteFilter(params) {
       store.dispatch("filterPets/deleteFilter");
     }
-    
+
     return {
       params,
       updateFilter,
       deleteFilter,
       msgVisible,
-    }
+    };
   },
   data() {
     return {
@@ -628,49 +630,47 @@ export default {
       totalPages: 0,
       esteril: "",
       sexo: "",
-      vacunas:"",
-      mascota:[],
-      peso:[],
-      txtParam:"",
-      noResult:false,
+      vacunas: "",
+      mascota: [],
+      peso: [],
+      txtParam: "",
+      noResult: false,
     };
   },
   components: {
     navbar,
     msgSuccess,
-    
   },
-  watch:{
-        
-    "$route":{
+  watch: {
+    $route: {
       immediate: true,
-      handler(newVal){
-        if(newVal.name != "Adopta"){
-          this.deleteFilter()
-        } 
-      }
-    }
+      handler(newVal) {
+        if (newVal.name != "Adopta") {
+          this.deleteFilter();
+        }
+      },
+    },
   },
   methods: {
-    Esterilidad(){
+    Esterilidad() {
       switch (this.esteril) {
-        case 'Si':
-          this.esteril = 'No';
+        case "Si":
+          this.esteril = "No";
           break;
-        case 'No':
-          this.esteril = '';
+        case "No":
+          this.esteril = "";
           break;
         default:
-          this.esteril = 'Si';
+          this.esteril = "Si";
           break;
       }
     },
     Sexo() {
       switch (this.sexo) {
-        case 'Hembra':
+        case "Hembra":
           this.sexo = "Macho";
           break;
-        case 'Macho':
+        case "Macho":
           this.sexo = "";
           break;
         default:
@@ -680,10 +680,10 @@ export default {
     },
     Vacunar() {
       switch (this.vacunas) {
-        case 'true':
+        case "true":
           this.vacunas = "false";
           break;
-        case 'false':
+        case "false":
           this.vacunas = "";
           break;
         default:
@@ -692,72 +692,68 @@ export default {
       }
     },
     Tipo(animal) {
-      
-
-      
-      
       switch (animal) {
-        case 'Canino':
-          if(this.mascota[0]) this.mascota[0] = false;
+        case "Canino":
+          if (this.mascota[0]) this.mascota[0] = false;
           else this.mascota[0] = true;
           break;
-        case 'Felino':
-          if(this.mascota[1]) this.mascota[1] = false;
+        case "Felino":
+          if (this.mascota[1]) this.mascota[1] = false;
           else this.mascota[1] = true;
           break;
-        case 'Bovino':
-          if(this.mascota[2]) this.mascota[2] = false;
+        case "Bovino":
+          if (this.mascota[2]) this.mascota[2] = false;
           else this.mascota[2] = true;
           break;
-        case 'Pez':
-          if(this.mascota[3]) this.mascota[3] = false;
+        case "Pez":
+          if (this.mascota[3]) this.mascota[3] = false;
           else this.mascota[3] = true;
           break;
-        case 'Roedor':
-          if(this.mascota[4]) this.mascota[4] = false;
+        case "Roedor":
+          if (this.mascota[4]) this.mascota[4] = false;
           else this.mascota[4] = true;
           break;
-        case 'Ave':
-          if(this.mascota[5]) this.mascota[5] = false;
+        case "Ave":
+          if (this.mascota[5]) this.mascota[5] = false;
           else this.mascota[5] = true;
           break;
-        case 'Equino':
-          if(this.mascota[6]) this.mascota[6] = false;
+        case "Equino":
+          if (this.mascota[6]) this.mascota[6] = false;
           else this.mascota[6] = true;
           break;
-        case 'Otro':
-          if(this.mascota[7]) this.mascota[7] = false;
+        case "Otro":
+          if (this.mascota[7]) this.mascota[7] = false;
           else this.mascota[7] = true;
           break;
       }
     },
     Peso(tam) {
       var tip = document.getElementById(`${tam}`);
-      if (tip.className=='') tip.classList.add('rojo');
-      else tip.classList.remove('rojo');
+      if (tip.className == "") tip.classList.add("rojo");
+      else tip.classList.remove("rojo");
 
       tip = document.getElementById(`P${tam}`);
-      if (tip.className=='') tip.classList.add('rojo');
-      else tip.classList.remove('rojo');
+      if (tip.className == "") tip.classList.add("rojo");
+      else tip.classList.remove("rojo");
       switch (tam) {
-        case 'Chico':
-          if(this.peso[0]) this.peso[0] = false;
+        case "Chico":
+          if (this.peso[0]) this.peso[0] = false;
           else this.peso[0] = true;
           break;
-        case 'Pequeño':
-          if(this.peso[1]) this.peso[1] = false;
+        case "Pequeño":
+          if (this.peso[1]) this.peso[1] = false;
           else this.peso[1] = true;
           break;
-        case 'Mediano':
-          if(this.peso[2]) this.peso[2] = false;
+        case "Mediano":
+          if (this.peso[2]) this.peso[2] = false;
           else this.peso[2] = true;
           break;
-        case 'Grande':
-          if(this.peso[3]) this.peso[3] = false;
+        case "Grande":
+          if (this.peso[3]) this.peso[3] = false;
           else this.peso[3] = true;
           break;
-        case 'Enorme':
-          if(this.peso[4]) this.peso[4] = false;
+        case "Enorme":
+          if (this.peso[4]) this.peso[4] = false;
           else this.peso[4] = true;
           break;
       }
@@ -827,34 +823,33 @@ export default {
       }
     },
     filtro() {
+      var btnAbrirPopup = document.getElementById("btn-abrir-popup"),
+        overlay = document.getElementById("overlay"),
+        popup = document.getElementById("popup"),
+        tex = document.getElementById("scrollbar"),
+        btnCerrarPopup = document.getElementById("btn-cerrar-popup");
 
-      var btnAbrirPopup = document.getElementById('btn-abrir-popup'),
-        overlay = document.getElementById('overlay'),
-        popup = document.getElementById('popup'),
-        tex = document.getElementById('scrollbar'),
-        btnCerrarPopup = document.getElementById('btn-cerrar-popup');
-
-      overlay.classList.add('active');
-      popup.classList.add('active');
-      tex.classList.add('bloquear');
+      overlay.classList.add("active");
+      popup.classList.add("active");
+      tex.classList.add("bloquear");
     },
-    salir(){
-      var btnAbrirPopup = document.getElementById('btn-abrir-popup'),
-        overlay = document.getElementById('overlay'),
-        popup = document.getElementById('popup'),
-        tex = document.getElementById('scrollbar'),
-        btnCerrarPopup = document.getElementById('btn-cerrar-popup');
-      tex.classList.remove('bloquear');
-      overlay.classList.remove('active');
-      popup.classList.remove('active');
+    salir() {
+      var btnAbrirPopup = document.getElementById("btn-abrir-popup"),
+        overlay = document.getElementById("overlay"),
+        popup = document.getElementById("popup"),
+        tex = document.getElementById("scrollbar"),
+        btnCerrarPopup = document.getElementById("btn-cerrar-popup");
+      tex.classList.remove("bloquear");
+      overlay.classList.remove("active");
+      popup.classList.remove("active");
     },
-    tranformToParam(){
+    tranformToParam() {
       // Tratamiento de las entradas
       valor = 1;
       let tiposP = "";
       let esterilP = "";
-      let sexoP= "";
-      let tamanoP= "";
+      let sexoP = "";
+      let tamanoP = "";
       let vacunasP = "";
       let a = 0;
       var tipos = [];
@@ -867,34 +862,36 @@ export default {
       if (!this.mascota[5]) tipos[a++] = "Ave";
       if (!this.mascota[6]) tipos[a++] = "Equino";
       if (!this.mascota[7]) tipos[a++] = "Otro";
-      a=0;
+      a = 0;
       if (!this.peso[0]) tamano[a++] = "Chico (menos de 5 Kg)";
       if (!this.peso[1]) tamano[a++] = "Pequeño (de 6 a 14 Kg)";
       if (!this.peso[2]) tamano[a++] = "Mediano (de 15 a 25 Kg)";
       if (!this.peso[3]) tamano[a++] = "Grande (de 26 a 50 kg)";
       if (!this.peso[4]) tamano[a++] = "Enorme (mayor a 50 kg)";
-      
-      if(!tipos.length == 0){
-        tiposP = "&tipo="+tipos.toString();
+
+      if (!tipos.length == 0) {
+        tiposP = "&tipo=" + tipos.toString();
       }
-      if(!this.esteril == ""){
-        esterilP = "&esteril="+this.esteril;
+      if (!this.esteril == "") {
+        esterilP = "&esteril=" + this.esteril;
       }
-      if(!this.sexo == ""){
-        sexoP = "&sexo="+this.sexo;
+      if (!this.sexo == "") {
+        sexoP = "&sexo=" + this.sexo;
       }
-      if(!tamano.length == 0){
-        tamanoP = "&tamano="+tamano.toString();
+      if (!tamano.length == 0) {
+        tamanoP = "&tamano=" + tamano.toString();
       }
-      if(!this.vacunas == ""){
-        vacunasP = "&vacunada="+this.vacunas;
+      if (!this.vacunas == "") {
+        vacunasP = "&vacunada=" + this.vacunas;
       }
-      this.txtParam = tiposP+esterilP+sexoP+tamanoP+vacunasP;
+      this.txtParam = tiposP + esterilP + sexoP + tamanoP + vacunasP;
     },
-    filtrar: function(){
+    filtrar: function () {
       this.noResult = false;
       this.tranformToParam();
       this.pagina = this.$route.params.idPage;
+      this.Listamascota = pets;
+      /*
       axios
         .get(
           "https://unpetlife.herokuapp.com/api/pet/consultaFil?page=" +
@@ -929,70 +926,67 @@ export default {
           }
           
 
-
       });
+      */
     },
-    limpiar:function(){
+    limpiar: function () {
       this.noResult = false;
-      this.deleteFilter()
+      this.deleteFilter();
       this.$router.push("/adopta/" + 1);
-      this.sexo= this.params.sexo;
-      this.vacunas=this.params.vacunas;
-      this.esteril= this.params.esteril;
-      this.mascota=this.params.mascota;
-      this.peso=this.params.peso
-      this.tranformToParam()
+      this.sexo = this.params.sexo;
+      this.vacunas = this.params.vacunas;
+      this.esteril = this.params.esteril;
+      this.mascota = this.params.mascota;
+      this.peso = this.params.peso;
+      this.tranformToParam();
 
-
-      
-      while(document.querySelector('.rojo')!=null){
-        document.querySelector('.rojo').classList.remove('rojo');
+      while (document.querySelector(".rojo") != null) {
+        document.querySelector(".rojo").classList.remove("rojo");
       }
 
       axios
         .get(
           "https://unpetlife.herokuapp.com/api/pet/consultaFil?page=0" +
             "&size=" +
-            this.size + this.txtParam
+            this.size +
+            this.txtParam
         )
         .then((data) => {
           this.Listamascota = data.data.content;
           this.totalPages = data.data.totalPages;
-      });
-      
-    }
+        });
+    },
   },
   mounted: function () {
     //Load values of variables
     this.pagina = this.$route.params.idPage;
     //Load using vueX
-    this.sexo= this.params.sexo;
-    this.vacunas=this.params.vacunas;
-    this.esteril= this.params.esteril;
-    this.mascota=this.params.mascota;
-    this.peso=this.params.peso
+    this.sexo = this.params.sexo;
+    this.vacunas = this.params.vacunas;
+    this.esteril = this.params.esteril;
+    this.mascota = this.params.mascota;
+    this.peso = this.params.peso;
 
-    this.filtrar()
+    this.filtrar();
   },
 };
 </script>
 <style >
 .filtroP {
-    margin: 5px;
-    padding: 3%;
-    align-content: center;
-    border-right: solid 1px rgb(33, 34, 51);
-    text-align: center;
+  margin: 5px;
+  padding: 3%;
+  align-content: center;
+  border-right: solid 1px rgb(33, 34, 51);
+  text-align: center;
 }
 .colFil {
-    border-bottom: solid 1px rgb(25, 27, 53);
-    padding: 2%;
+  border-bottom: solid 1px rgb(25, 27, 53);
+  padding: 2%;
 }
-.filBtn{
-  margin-top:5%;
+.filBtn {
+  margin-top: 5%;
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 5%;
 }
-
 </style>

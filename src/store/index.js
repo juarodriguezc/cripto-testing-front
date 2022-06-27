@@ -16,29 +16,15 @@ export default createStore({
 	},
 	mutations: {
 		login_request(state) {
-			state.statusMessage = "performing login";
+			state.statusMessage = "Performing login";
 			state.passChanged = false;
 		},
 		login_success(state, {token, email, lastLogin}) {
 			state.token = token;
 			state.user = email;
-			state.statusMessage = "success";
+			state.statusMessage = "Success";
 			state.error = false;
 			state.lastLogin = lastLogin;
-		},
-		not_registered_user(state) {
-			state.statusMessage =
-				"El correo ingresado no se encuentra registrado";
-            state.error = true;
-		},
-		credentials_error(state) {
-			state.statusMessage = "La Contraseña ingresada es errónea";
-			state.error = true;
-		},
-		non_activated(state) {
-			state.statusMessage =
-				"El usuario no está activado, actívalo desde tu correo electrónico";
-            state.error = true;
 		},
 		default_error(state, error) {
 			state.statusMessage = error;
@@ -60,42 +46,27 @@ export default createStore({
 		}
 	},
 	actions: {
-		login({ commit }, json) {
+		login({ commit }, data) {
 			return new Promise((resolve, reject) => {
 				commit("login_request");
 				axios({
-					//url: "http://localhost:8080/api/auth/login",
-					url: "https://unpetlife.herokuapp.com/api/auth/login",
-					data: json,
+					url: data.domain,
+					data: data.json,
 					method: "POST",
 				})
-				.then((response) => {
+				.then((response) => {					
 					const token = response.data.token;
 					const email = response.data.email;
                     const lastLogin = response.data.lastLogin;
 					localStorage.setItem("token", token);
 					axios.defaults.headers.common["Authorization"] = 'Bearer ' +token;
 					commit("login_success", {token, email, lastLogin});
-                    //console.log("sucess")
 					resolve(response);
-                    
+				
 				})
 				.catch((error) => {
-					const errorMsg = error.response.data.message;
-					switch (errorMsg) {
-						case "Usuario no registrado":
-							commit("not_registered_user");
-							break;
-						case "Error: Unauthorized Bad credentials":
-							commit("credentials_error");
-							break;
-						case "Usuario no activado":
-							commit("non_activated");
-							break;
-						default:
-							commit("default_error", errorMsg);
-							break;
-					}
+					const errorMsg = error.response.data.message.toString();
+					commit("default_error",errorMsg);
 					localStorage.removeItem("token");
 					reject(error);
 				})

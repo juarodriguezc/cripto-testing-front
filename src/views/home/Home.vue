@@ -26,8 +26,7 @@
         </div>
 
         <div class="row tres_mascotas">
-
-            <div class="col-lg-4 col-md-6 col-sm-12 vista" v-for="mascota in Listamascota" :key = "mascota.idPet"> 
+            <div class="col-lg-4 col-md-6 col-sm-12 vista" v-for="mascota in Listamascota" :key = "mascota.idPet">
                 <div class="card mb-4 box-shadow" 
                     :class="mascotas(mascota.id)">
                     
@@ -532,115 +531,95 @@
     <!-- </div> -->
 </template>
 <script>
+import navbar from "@/components/navbar";
+import pets from "../../data/pets.js";
 
-import navbar from "@/components/navbar"
-import axios from 'axios';
-
-var datos = '';
+var datos = "";
 var valor = 1;
 export default {
-    data(){
-        return{
-            Listamascota:null,
-            size:4,
-            totalPages:0
+  data() {
+    return {
+      Listamascota: null,
+      size: 4,
+      totalPages: 0,
+    };
+  },
+  components: {
+    navbar,
+  },
+  computed: {},
+  methods: {
+    verInfo(idPet) {
+      this.$router.push("/info-mascota/" + idPet);
+    },
+    mascotas(i) {
+      if (valor % 2 == 0) {
+        valor++;
+        return {
+          izquierda: true,
+        };
+      } else {
+        valor++;
+        return {
+          derecha: true,
+        };
+      }
+    },
+    nombre(name) {
+      if (name.length > 9) {
+        return "max-9 name";
+      } else {
+        return "min-9 name";
+      }
+    },
+    tamanio(nombre) {
+      if (nombre.length < 18) {
+        return nombre;
+      } else {
+        datos = nombre.split(" ");
+        // console.log(datos);
+        return `${datos[0]} ${datos[1]}`;
+      }
+    },
+    completo(e) {
+      if (e >= 18) {
+        return "mirar";
+      }
+    },
+    adicion(nombre) {
+      if (nombre.length > 18) {
+        let aux = "";
+        for (var i = 2; i < datos.length; i++) {
+          aux = aux + " " + datos[i];
         }
+        return aux;
+      }
     },
-    components:{
-        navbar,
-        
-    },
-    computed: {
-        
-    },
-    methods:{
-        verInfo(idPet){
-            this.$router.push("/info-mascota/"+idPet)
-        },
-        mascotas(i) {
-            if(valor%2==0){
-                valor++;
-                return {
-                    'izquierda':true
-                }
-            }
-            else{
-                valor++;
-                return {
-                    'derecha':true
-                }
-            }
-        },
-        nombre(name) {
-            if(name.length>9){
-                return "max-9 name"
-            }
-            else{
-                return "min-9 name"
-            }
-        },
-        tamanio(nombre) {
-            if(nombre.length < 18) {
-                return nombre
-            }
-            else{
-                datos = nombre.split(" ");
-                // console.log(datos);
-                return `${datos[0]} ${datos[1]}`
-            }
-        },
-        completo(e) {
-            if(e >= 18){
-                return 'mirar'
-            }
-            
-        },
-        adicion(nombre) {
-            if(nombre.length>18){
-                let aux = '';
-                for (var i = 2; i < datos.length; i++) {
-                    aux = aux + ' ' + datos[i];
-                }
-                return aux
-                
-            }
-        }
-    },
-    mounted:function(){
-        // this.pagina = this.$route.params.idPage;
-        //console.log("Page actual ",this.pagina);
-        //axios.get("http://localhost:8080/api/pet/consulta?page="+(0)+"&size="+this.size).then( data =>{
-        axios.get("https://unpetlife.herokuapp.com/api/pet/consulta?page="+(0)+"&size="+this.size).then( data =>{
-            this.Listamascota = data.data.content;
-            this.totalPages = data.data.totalPages;
-            // console.log(this.Listamascota);
-            // console.log("total_pages:",data.data.totalPages);
-        })
-        // console.log(mascota.id);
-    }
-}
-
+  },
+  mounted: function () {
+    this.Listamascota = pets.slice(0,2);
+  },
+};
 </script>
 <style>
-    @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-    
-    .info_cuida_mascota{
-        background-color: rgb(54, 54, 54);
-        margin-bottom: -10px;
-        height: 300px;
-    }
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
-    .info_cuida_mascota .contenido{
-        color:white;
-    }
-    .ico_tip{
-        width:70px;
-    }
-    .tips_text{
-        font-family: 'Open Sans';
-        font-size: 18px;
-        font-weight: 600;
-        color:rgb(83, 83, 83);
-        
-    }
+.info_cuida_mascota {
+  background-color: rgb(54, 54, 54);
+  margin-bottom: -10px;
+  height: 300px;
+}
+
+.info_cuida_mascota .contenido {
+  color: white;
+}
+.ico_tip {
+  width: 70px;
+}
+.tips_text {
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(83, 83, 83);
+}
 </style>
