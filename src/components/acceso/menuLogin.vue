@@ -85,7 +85,7 @@ export default {
     const loggedIn = computed(() => store.getters.isLoggedIn);
     const passChanged = computed(() => store.getters.successChangedPass);
     const domain = process.env.VUE_APP_DOMAIN_BACK;
-
+    store.dispatch("restartVals");
     function login(json) {
       store
         .dispatch("login", { json, domain:this.domain+"/auth/login" })

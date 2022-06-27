@@ -12,14 +12,18 @@ export default createStore({
 		error: false,
 		successRecoverPassword: false,
 		passChanged: false,
-        lastLogin: null
+		lastLogin: null
 	},
 	mutations: {
+		restart(state){
+			state.statusMessage= "",
+			state.error = false;
+		},
 		login_request(state) {
 			state.statusMessage = "Performing login";
 			state.passChanged = false;
 		},
-		login_success(state, {token, email, lastLogin}) {
+		login_success(state, { token, email, lastLogin }) {
 			state.token = token;
 			state.user = email;
 			state.statusMessage = "Success";
@@ -33,44 +37,54 @@ export default createStore({
 		logout(state) {
 			state.status = "";
 			state.token = "";
-            state.lastLogin = null;
+			state.lastLogin = null;
 		},
-		email_sent_recover(state){
+		email_sent_recover(state) {
 			state.successRecoverPassword = true;
 		},
-		goback_recover(state){
+		goback_recover(state) {
 			state.successRecoverPassword = false;
 		},
-		change_password(state){
+		change_password(state) {
 			state.passChanged = true;
 		}
 	},
 	actions: {
+		restartVals({ commit }){
+			commit("restart");
+		},
 		login({ commit }, data) {
 			return new Promise((resolve, reject) => {
-				commit("login_request");
-				axios({
-					url: data.domain,
-					data: data.json,
-					method: "POST",
-				})
-				.then((response) => {					
-					const token = response.data.token;
-					const email = response.data.email;
-                    const lastLogin = response.data.lastLogin;
-					localStorage.setItem("token", token);
-					axios.defaults.headers.common["Authorization"] = 'Bearer ' +token;
-					commit("login_success", {token, email, lastLogin});
-					resolve(response);
-				
-				})
-				.catch((error) => {
-					const errorMsg = error.response.data.message.toString();
-					commit("default_error",errorMsg);
+				if (data.json.username === "" && data.json.password === "") {
+					const errorMsg = "Ingresa el correo y la contraseña";
+					commit("default_error", errorMsg);
 					localStorage.removeItem("token");
-					reject(error);
-				})
-            });
+				}
+				else {
+					commit("login_request");
+					axios({
+						url: data.domain,
+						data: data.json,
+						method: "POST",
+					})
+					.then((response) => {
+						const token = response.data.token;
+						const email = response.data.email;
+						const lastLogin = response.data.lastLogin;
+						localStorage.setItem("token", token);
+						axios.defaults.headers.common["Authorization"] = 'Bearer ' + token;
+						commit("login_success", { token, email, lastLogin });
+						resolve(response);
+
+					})
+					.catch((error) => {
+						const errorMsg = error.response.data.message.toString();
+						commit("default_error", errorMsg);
+						localStorage.removeItem("token");
+						reject(error);
+					})
+				}
+			});
 		},
 		logout({ commit }) {
 			return new Promise((resolve, reject) => {
@@ -82,24 +96,24 @@ export default createStore({
 			});
 		},
 		//Recuperar contraseña
-		recoverPassword({ commit }, json){
+		recoverPassword({ commit }, json) {
 			//console.log(json)
-			return new Promise((resolve, reject)=>{
+			return new Promise((resolve, reject) => {
 				axios({
 					//url: "http://localhost:8080/api/passrecover/sendLink/"+json.username,
-					url: "https://unpetlife.herokuapp.com/api/passrecover/sendLink/"+json.username,
-					
+					url: "https://unpetlife.herokuapp.com/api/passrecover/sendLink/" + json.username,
+
 					data: json,
 					method: "POST",
 				})
-				.then((response)=>{
-					commit("email_sent_recover");
-					//console.log("Correo enviado");
-					resolve(response);
-				})
-				.catch((error)=>{
-					reject(error);
-				})
+					.then((response) => {
+						commit("email_sent_recover");
+						//console.log("Correo enviado");
+						resolve(response);
+					})
+					.catch((error) => {
+						reject(error);
+					})
 			})
 		},
 		goBackRecover({ commit }) {
@@ -109,9 +123,9 @@ export default createStore({
 			});
 		},
 		//Cambiar contraseña
-		changePassword({ commit }, json){
+		changePassword({ commit }, json) {
 			//console.log(json)
-			return new Promise((resolve, reject)=>{
+			return new Promise((resolve, reject) => {
 
 
 				axios({
@@ -120,31 +134,31 @@ export default createStore({
 					data: json,
 					method: "PUT",
 				})
-				.then((response)=>{
-					commit("change_password");
-					//console.log("Contraseña cambiada");
-					resolve(response);
-				})
-				.catch((error)=>{
-					reject(error);
-				})
+					.then((response) => {
+						commit("change_password");
+						//console.log("Contraseña cambiada");
+						resolve(response);
+					})
+					.catch((error) => {
+						reject(error);
+					})
 
 			})
 		},
 
 	},
 	getters: {
-        isLoggedIn: state => !!state.token,
-        authStatus: state => state.statusMessage,
-        errorBoolean: state => state.error,
+		isLoggedIn: state => !!state.token,
+		authStatus: state => state.statusMessage,
+		errorBoolean: state => state.error,
 		recoverStatus: state => state.messageRecover,
 		successSentRecover: state => state.successRecoverPassword,
 		successChangedPass: state => state.passChanged,
-        lastLogin: state => state.lastLogin,
-    },
-	modules:{
-		addFormApl : addFormApli,
-		addPets : addPet,
-		filterPets : filterPet,
+		lastLogin: state => state.lastLogin,
+	},
+	modules: {
+		addFormApl: addFormApli,
+		addPets: addPet,
+		filterPets: filterPet,
 	}
 });
