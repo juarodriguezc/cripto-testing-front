@@ -1,0 +1,340 @@
+.info_mascota {
+	display: grid;
+	// grid-row-gap: 2rem;
+	grid-column-gap: 0rem;
+	
+	// background-color: $azul-blanco;
+	@include degragado-azul2;
+	// max-width: 250rem;
+	margin: 0rem 5% 5rem 5%;
+	overflow:hidden;
+	// padding: 3rem;
+	border: $gris2 4px solid;
+	border-radius: 3rem;
+	// margin-bottom: 5rem;
+	-webkit-box-shadow: 28px 24px 45px -2px rgba(0,0,0,0.7);
+	-moz-box-shadow: 28px 24px 45px -2px rgba(0,0,0,0.7);
+	box-shadow: 28px 24px 45px -2px rgba(0,0,0,0.7);
+	grid-template-columns: repeat(1, 1fr);
+	
+	@include media900 {
+		grid-template-columns: 65% 35%;
+		// padding: 3rem 1rem;
+	}
+	@include media1200 {
+		grid-template-columns: 60% 40%;
+		margin: 0rem auto 5rem;
+		max-width: 110rem;
+	}
+	// @include media1400 {
+	// 	max-width: 130rem;
+	// }
+
+	.imagen {
+		display: flex;
+		// margin: auto;
+		height: 100%;
+		// margin: auto;
+		// background-color: $gris2;
+		.imageninfoMascota {
+			width: 100%;
+			object-fit: cover;
+		    height: auto;
+		    position: inherit;
+		    margin: auto;
+		    padding: .2rem;
+			max-height: 60rem;
+		}
+	}
+
+	.informacion {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 1rem;
+		margin: 1rem 0;
+
+		@include media900 {
+			border-left: $gris2 5px solid;
+		}
+		// padding: 2rem;
+		.logo {
+			display: flex;
+			// grid-column: 1/3;
+			grid-template-columns: 1fr 2fr;
+			
+			justify-content: center;
+			align-items: center;
+			margin: 2rem auto;
+			// margin-bottom: 3rem;
+			span {
+				margin-left: 0;
+			}	
+
+			.icono {
+				width: 8rem;
+				height: 8rem;
+				border-radius: 5rem;
+				border: black 5px solid;
+				display: none;
+				@include media330 {
+					display: block;
+				}
+				@include media900 {
+					display: none;
+				}
+				@include media1010 {
+					display: block;
+				}
+			}
+			.texto {
+				margin: auto 1rem;
+				font-size: 5rem;
+				span {
+					font-size: 4rem;
+				}
+				@include media400 {
+					font-size: 6rem;
+					span{
+						font-size: 5rem;
+					}
+				}
+				@include media1200 {
+					font-size: 7rem;
+					span{
+						font-size: 6rem;
+					}
+				}
+			}
+		}
+
+		.datos{
+			display: grid;
+			// grid-column-gap: 2rem;
+			grid-template-columns:repeat(1, 1fr);
+			// border-radius: 3rem;
+			grid-row-gap: 1rem;
+			border-top: $gris2 4px solid;
+			border-bottom: $gris2 4px solid;
+			align-self: center;
+			@include media550{
+				grid-template-columns:repeat(2, 1fr);
+			}
+			@include media900 {
+				grid-template-columns:repeat(1, 1fr);
+			}
+			@include media1200{
+				grid-template-columns:repeat(2, 1fr);
+			}
+			.izquierda, .derecha {
+				display: grid;
+				// flex-direction: column;
+				background-color: white;
+				
+				@include tipografia($Aclonica, 2.5rem, $azulado, 600);
+				text-align: center;
+				// grid-template-columns: repeat(2, 1fr);
+				span {
+					// text-align: right;
+					@include tipografia($Merienda, 2rem, $gris4, 500);
+				}
+				@include media330 {
+					display: block;
+				}
+				@include media550 {
+					display: grid;
+					font-size: 3rem;
+					// @include tipografia($Aclonica, 3rem, $azulado, 600);
+					span {
+						// text-align: right;
+						font-size: 2.5rem;
+						// @include tipografia($Merienda, 2.5rem, $gris4, 500);
+					}
+				}
+				@include media650 {
+					display: block;
+    				span {
+    					margin-left: 1rem;
+					}
+				}
+				@include media900 {
+					display: grid;
+				}
+				@include media1010 {
+					display: block;
+				}
+				@include media1200 {
+					display: grid;
+				}
+				.anios {
+					font-size: 3rem;
+				}
+			}
+			.izquierda {
+				// align-items: flex-start;
+				padding: 1rem 1rem 1rem 2rem;
+				// @include media
+				border-bottom: $gris2 4px solid;
+
+				@include media550 {
+					border-bottom: $gris2 0px solid;
+				}
+				@include media900 {
+					border-bottom: $gris2 4px solid;
+				}
+				@include media1200 {
+					border-bottom: $gris2 0px solid;
+				}
+			}
+			.derecha {
+				// align-items: flex-end;
+				border-top: $gris2 4px solid;
+				padding: 1rem 2rem 1rem 1rem;
+				
+				@include media550 {
+					border-top: $gris2 0px solid;
+				}
+				@include media900 {
+					border-top: $gris2 4px solid;
+				}
+				@include media1200 {
+					border-top: $gris2 0px solid;
+				}
+			}
+			.edad{
+				@include media1200{
+					display: block;
+				}
+			}
+			.img-tamaño {
+				display: grid;
+				grid-template-columns: 60% 40%;
+				// grid-template-rows: repeat(3, 1fr);
+				padding: 0;
+				.tamaño {
+					font-size: 2.8rem;
+					font-weight: 800;
+					padding: 0;
+					align-self: center;
+					grid-column: 1/2;
+					grid-row: 1/2;
+				}
+				.tipo {
+					@include tipografia($Merienda, 2.2rem, $gris4, 500);
+					grid-column: 1/2;
+					grid-row: 2/3;
+					text-align: end;
+					padding: 0 2rem 0 0;
+					border-bottom: $gris2 3px solid;
+				}
+				.animal {
+					grid-column: 1/2;
+					grid-row: 3/4;
+					width: 90%;
+					max-width: 12rem;
+					// height: auto;
+					// max-width: 20rem;
+					justify-self: right;
+				}
+				.modelo {
+					max-width: -webkit-fill-available;
+					max-height: 16rem;
+					// width: 100%;
+					height: auto;
+					margin: 2% 0;
+					grid-column: 2/3;
+					grid-row: 1/4;
+					border-left: $gris2 5px solid;
+
+				}
+			}
+			.ultimos {
+				display: grid;
+				border-left: $gris2 3px solid;
+				grid-template-columns: 10rem auto;
+				padding-left: 0;
+				padding-right: 0;
+
+				@include media550 {
+					grid-template-columns: 6rem auto;
+				}
+				@include media550 {
+					grid-template-columns: 10rem auto;
+				}
+				@include media550 {
+					grid-template-columns: 6rem auto;
+				}
+				
+				.sexo {
+					-webkit-transform: rotate(-90deg); 
+					grid-column: 1/2;
+					grid-row: 1/3;
+					align-self: center;
+					justify-self: center;
+					margin: revert;
+				}
+				.esteril, .vacuna {
+					margin: 1rem auto 1rem 0;
+					align-self: center;
+					span {
+						@include tipografia($Merienda, 2.5rem, $gris4, 500);
+						font-style: italic;
+					}
+				}
+			}
+		}
+		.tercera {
+			@include media550 {
+				grid-template-columns: 58% 42%;
+			}
+			@include media900 {
+				grid-template-columns: repeat(1, 1fr);
+			}
+			@include media1200 {
+				grid-template-columns: 58% 42%;
+			}
+		}
+		.botones {
+			.btn {
+				width: -webkit-fill-available;
+				&:hover {
+					@include degragado-azul;
+				}
+			}
+		}
+	}
+	.mensaje {
+		padding: 4rem 4rem 3rem;
+		display: flex;
+	    flex-direction: column;	
+	    background-color: white;
+		@include media900 {
+			grid-column: 1/3;
+		}
+		.descripcion {
+			@include tipografia($Aclonica, 2.5rem, $azulado, 600);
+			margin-bottom: 2rem;
+			
+			@include media550{
+				font-size: 2.8rem;
+			}
+			@include media700{
+				font-size: 3.2rem;
+			}
+			// @include media550{
+			// 	font-size: 2.8rem;
+			// }
+			// @include media550{
+			// 	font-size: 2.8rem;
+			// }
+		}	
+		p {
+			@include tipografia($Merienda, 2rem, $gris4, 500);
+			@include media550{
+				font-size: 2.4rem;
+			}
+			@include media700{
+				font-size: 2.6rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,91 @@
+.registrar {
+	margin-top: 2.5rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 2rem;
+
+	.datos_contenedor {
+		position: relative;
+		margin: 1rem 0;
+	}
+	.texto, label {
+		@include tipografia($Gloria, 2.8rem, white, 600);
+		margin: 1rem;
+	}
+
+	input {
+		@include tipografia($Merienda, 2.8rem, black, 600);
+		width: 99%;
+		padding: 1rem 2rem;
+		margin: 0;
+		border-radius: 2rem;
+		border: none;
+		font-size: 2rem;
+	}
+	.mas {
+		text-transform: capitalize;
+	}
+	.error_msg {
+		position: relative;
+		margin: 0;
+		margin-top: 1rem;
+		text-align: left;
+		padding: 1rem;
+		max-width: fit-content;
+		// background-color: #4B8BDD;
+		// color: rgb(192, 59, 59);
+		font-size: 17px;
+        font-weight: 400;
+		border: solid;
+		border-radius: 2rem;
+		@include tipografia($Gloria, 2.2rem, rgb(192, 59, 59), 500);
+	}
+	.espacio{
+		position: relative;
+		margin-top: 1rem;
+		margin-bottom: 0;
+	}
+
+	.boton2 {
+		margin-top: 1rem;
+		margin-right: 2rem;
+		padding: 1.3rem;
+		@include tipografia($Merienda, 3rem, black, 300);
+		// border: none;
+		border-radius: 3rem;
+		background-color: white;
+	}
+
+	.error {
+		border: solid;
+		border-color: red;
+	}
+
+	.pnombre, .pcontra{
+		grid-column: 1 / 3;
+		@include media700{
+			grid-column: 1 / 2;
+		}
+		@include media890{
+			grid-column: 1 / 3;
+		}
+		@include media1305{
+			grid-column: 1 / 2;
+		}
+	}
+	.papellido, .prepit {
+		grid-column: 1 / 3;
+		@include media700{
+			grid-column: 2 / 3;
+		}
+		@include media890{
+			grid-column: 1 / 3;
+		}
+		@include media1305{
+			grid-column: 2 / 3;
+		}
+	}
+	.pemail, .pcelular, .espacio, .botonf {
+		grid-column: 1 / 3;
+	}
+}

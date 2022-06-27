@@ -1,0 +1,3569 @@
+@charset "UTF-8";
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+     ========================================================================== */
+/**
+   * Remove the margin in all browsers.
+   */
+body {
+  margin: 0;
+}
+
+/**
+   * Render the `main` element consistently in IE.
+   */
+main {
+  display: block;
+}
+
+/**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+     ========================================================================== */
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+     ========================================================================== */
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+a {
+  background-color: transparent;
+}
+
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+   * Add the correct font size in all browsers.
+   */
+small {
+  font-size: 80%;
+}
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+     ========================================================================== */
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+img {
+  border-style: none;
+}
+
+/* Forms
+     ========================================================================== */
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+   * Correct the padding in Firefox.
+   */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+textarea {
+  overflow: auto;
+}
+
+/**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+     ========================================================================== */
+/*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+details {
+  display: block;
+}
+
+/*
+   * Add the correct display in all browsers.
+   */
+summary {
+  display: list-item;
+}
+
+/* Misc
+     ========================================================================== */
+/**
+   * Add the correct display in IE 10+.
+   */
+template {
+  display: none;
+}
+
+/**
+   * Add the correct display in IE 10.
+   */
+[hidden] {
+  display: none;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.texto_centrado {
+  text-align: center;
+}
+
+.texto_justificado {
+  text-align: justify;
+}
+
+.texto_derecha {
+  text-align: right;
+}
+
+.texto_izquierda {
+  text-align: left;
+}
+
+.mayuscula {
+  text-transform: capitalize;
+}
+
+.no-visible {
+  display: none;
+}
+
+/** Media Queries **/
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #4B8BDD;
+  background-image: url("../img/icono2.png");
+  font-size: 1.6rem;
+}
+
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+  width: 10px;
+  background-color: inherit;
+}
+
+body::-webkit-scrollbar-button:increment, body::-webkit-scrollbar-button {
+  display: none;
+}
+
+body::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #838383;
+  border-radius: 5rem;
+  border: 2px solid #838383;
+}
+
+.bloquear {
+  overflow: hidden;
+}
+
+.contenedor {
+  width: 100%;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+p {
+  font-size: 2rem;
+  color: black;
+}
+
+.contenedor {
+  display: block;
+}
+
+.contenedor .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#64b8ff+0,54c8e5+46,64b8ff+100 */
+  background: #64b8ff;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64b8ff', endColorstr='#64b8ff',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  margin: 1.5rem 0;
+}
+
+.contenedor .main {
+  display: flex;
+}
+
+.contenedor .icon {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contenedor .titulo {
+  -webkit-text-fill-color: #64B8FF;
+  -webkit-text-stroke: 3px black;
+  margin: 1rem;
+  align-items: center;
+  font-size: 5rem;
+  color: white;
+  font-family: "Aclonica", sans-serif;
+  font-weight: 600;
+}
+
+.contenedor .titulo span {
+  margin-left: 1rem;
+  font-size: 4rem;
+  color: white;
+  font-family: "Merienda", cursive;
+  font-weight: 600;
+  -webkit-text-fill-color: #6FABF9;
+  -webkit-text-stroke: 2px black;
+}
+
+@media (min-width: 900px) {
+  .contenedor .titulo {
+    font-size: 5.7rem;
+  }
+  .contenedor .titulo span {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contenedor .titulo {
+    font-size: 7rem;
+  }
+  .contenedor .titulo span {
+    font-size: 5.5rem;
+  }
+}
+
+.contenedor .titulo:hover {
+  -webkit-text-fill-color: #F45770;
+}
+
+.contenedor .titulo:hover span {
+  -webkit-text-fill-color: #A400AA;
+}
+
+.contenedor .tabs {
+  display: block;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  margin: auto 0;
+  margin-right: 2rem;
+}
+
+.contenedor .no-mirar {
+  display: none;
+}
+
+.contenedor .btn-block {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.contenedor .boton {
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+  color: black;
+  font-family: "Aclonica", sans-serif;
+  font-weight: 300;
+  border: none;
+  border-radius: 5rem;
+  background-color: unset;
+}
+
+@media (min-width: 1000px) {
+  .contenedor .boton {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contenedor .boton {
+    font-size: 2.6rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .contenedor .boton {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  .contenedor .boton {
+    font-size: 3.2rem;
+  }
+}
+
+.contenedor .boton:hover {
+  color: #FF1500;
+}
+
+.contenedor .boton:hover .icon-tabler-user {
+  stroke: #FF1500;
+}
+
+.contenedor .boton .icon-tabler-user {
+  width: 36px;
+  height: auto;
+  stroke-width: 1.5px;
+  stroke: #000000;
+  margin-right: 0;
+}
+
+.contenedor .boton .icon-tabler-user:hover {
+  stroke: red;
+}
+
+@media (min-width: 1000px) {
+  .contenedor .boton .icon-tabler-user {
+    width: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contenedor .boton .icon-tabler-user {
+    width: 44px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .contenedor .boton .icon-tabler-user {
+    width: 46px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .contenedor .boton .icon-tabler-user {
+    width: 48px;
+  }
+}
+
+@media (min-width: 600px) {
+  .contenedor .tabs {
+    display: flex;
+  }
+}
+
+@media (min-width: 900px) {
+  .contenedor .header {
+    border-radius: 10rem;
+  }
+  .contenedor .tabs {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 900px) {
+  .contenedor .header {
+    display: block;
+    align-items: center;
+  }
+  .contenedor .main {
+    margin-top: 1rem;
+    margin-right: 8rem;
+  }
+  .contenedor .titulo {
+    justify-content: center;
+    margin: 1rem auto 0;
+  }
+  .contenedor .tabs {
+    justify-content: center;
+    padding: 0 1rem 1rem;
+  }
+  .contenedor .boton {
+    padding: 0rem 1rem;
+  }
+}
+
+.seccion {
+  display: none;
+  margin-top: 3rem;
+}
+
+.seccion h2 {
+  color: white;
+}
+
+.mostrar-seccion {
+  display: block;
+}
+
+.video {
+  z-index: 10;
+  position: relative;
+  max-height: 50rem;
+  overflow: hidden;
+  margin: 0;
+}
+
+.video .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#43cee0+0,b7deed+40,b7deed+62,43cee0+100&0.5+0,0.5+100 */
+  background: -moz-linear-gradient(45deg, rgba(67, 206, 224, 0.5) 0%, rgba(183, 222, 237, 0.5) 40%, rgba(183, 222, 237, 0.5) 62%, rgba(67, 206, 224, 0.5) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(67, 206, 224, 0.5) 0%, rgba(183, 222, 237, 0.5) 40%, rgba(183, 222, 237, 0.5) 62%, rgba(67, 206, 224, 0.5) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(67, 206, 224, 0.5) 0%, rgba(183, 222, 237, 0.5) 40%, rgba(183, 222, 237, 0.5) 62%, rgba(67, 206, 224, 0.5) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8043cee0', endColorstr='#8043cee0',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.video video {
+  display: block;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+.video video::-webkit-media-controls {
+  display: none;
+}
+
+.contenido-video {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 580px) {
+  .contenido-video {
+    justify-content: left;
+  }
+}
+
+.contenido-video h2 {
+  display: flex;
+  flex-direction: column;
+  font-size: 3.3rem;
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  align-items: center;
+  text-align: center;
+}
+
+.contenido-video h2 span {
+  margin-top: 0.1rem;
+  padding: .5rem 3rem 1.4rem 1.5rem;
+  border-radius: 10rem;
+}
+
+@media (min-width: 580px) {
+  .contenido-video h2 {
+    align-items: flex-start;
+    justify-content: left;
+    text-align: left;
+    font-size: 4rem;
+    margin-left: 5%;
+  }
+  .contenido-video h2 span {
+    padding: 1rem 2rem 1.6rem 2rem;
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 850px) {
+  .contenido-video h2 {
+    font-size: 6rem;
+  }
+}
+
+.espacio_trabajo {
+  margin: 2rem 5%;
+  /* ------------------------- */
+  /* POPUP */
+  /* ------------------------- */
+  /* ------------------------- */
+  /* ANIMACIONES */
+  /* ------------------------- */
+}
+
+.espacio_trabajo .subtitulo {
+  background-color: white;
+  margin-bottom: 2rem;
+  border-radius: 10rem;
+}
+
+.espacio_trabajo .subtitulo .titulo_home {
+  font-size: 2.5rem;
+  color: #6FABF9;
+  font-family: "Merienda", cursive;
+  font-weight: 600;
+  padding: 2rem;
+}
+
+@media (min-width: 600px) {
+  .espacio_trabajo .subtitulo .titulo_home {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .espacio_trabajo .subtitulo .titulo_home {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .espacio_trabajo .subtitulo .titulo_home {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .espacio_trabajo .subtitulo .titulo_home {
+    font-size: 3.8rem;
+  }
+}
+
+.espacio_trabajo .subtitulo .titulo_cuidados {
+  font-size: 2.2rem;
+  color: #6FABF9;
+  font-family: "Merienda", cursive;
+  font-weight: 600;
+  padding: 2rem;
+}
+
+@media (min-width: 600px) {
+  .espacio_trabajo .subtitulo .titulo_cuidados {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .espacio_trabajo .subtitulo .titulo_cuidados {
+    font-size: 2.7rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .espacio_trabajo .subtitulo .titulo_cuidados {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .espacio_trabajo .subtitulo .titulo_cuidados {
+    font-size: 3.4rem;
+  }
+}
+
+.espacio_trabajo .mostrar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.espacio_trabajo .mostrar .botino {
+  display: flex;
+  background-color: white;
+  color: #6FABF9;
+  margin: 1rem;
+  padding: .5rem;
+  border-radius: 5rem;
+  font-size: 2.2rem;
+  color: #828282;
+  font-family: "Merienda", cursive;
+  font-weight: 600;
+}
+
+.espacio_trabajo .mostrar button {
+  background-color: white;
+  margin: 0rem;
+  border: none;
+  padding: 1.2rem 2rem;
+  border-radius: 5rem;
+  font-size: 2rem;
+  color: #55C7E7;
+  font-family: "Merienda", cursive;
+  font-weight: 600;
+}
+
+.espacio_trabajo .mostrar .color {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#64b8ff+0,54c8e5+46,64b8ff+100 */
+  background: #64b8ff;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64b8ff', endColorstr='#64b8ff',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  color: white;
+}
+
+.espacio_trabajo .tres_mascotas {
+  margin-bottom: 3rem;
+}
+
+.espacio_trabajo .tres_mascotas .vista {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.espacio_trabajo .tres_mascotas .vista .datos_mascota {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+@media (min-width: 1400px) {
+  .espacio_trabajo .tres_mascotas .vista .datos_mascota {
+    grid-template-columns: 1fr;
+  }
+}
+
+.espacio_trabajo .tres_mascotas .vista .name {
+  font-size: 3rem;
+  color: #4B8BDD;
+  font-family: "Aclonica", sans-serif;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.espacio_trabajo .tres_mascotas .vista .titulo_masc {
+  width: auto;
+}
+
+.espacio_trabajo .tres_mascotas .vista .titulo_masc p {
+  font-size: 1.8rem;
+  color: #373535;
+  font-family: "Aclonica", sans-serif;
+  font-weight: 500;
+}
+
+@media (min-width: 600px) {
+  .espacio_trabajo .tres_mascotas .vista .name {
+    font-size: 3.5rem;
+    color: #4B8BDD;
+    font-family: "Aclonica", sans-serif;
+    font-weight: 600;
+  }
+  .espacio_trabajo .tres_mascotas .vista .titulo_masc p {
+    font-size: 2.2rem;
+    color: #373535;
+    font-family: "Aclonica", sans-serif;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1000px) {
+  .espacio_trabajo .tres_mascotas .vista .name {
+    font-size: 3rem;
+    color: #4B8BDD;
+    font-family: "Aclonica", sans-serif;
+    font-weight: 600;
+  }
+  .espacio_trabajo .tres_mascotas .vista .titulo_masc p {
+    font-size: 1.8rem;
+    color: #373535;
+    font-family: "Aclonica", sans-serif;
+    font-weight: 500;
+  }
+}
+
+.espacio_trabajo .tres_mascotas .card {
+  height: 100%;
+  border: 1px solid #ccc;
+  box-shadow: 7px 7px 15px #592A08;
+}
+
+.espacio_trabajo .tres_mascotas .card .carta_mascota {
+  line-height: 15px;
+}
+
+.espacio_trabajo .tres_mascotas .card .titulo_masc {
+  margin-left: 2rem;
+}
+
+@media (min-width: 1200px) {
+  .espacio_trabajo .tres_mascotas .card .titulo_masc {
+    margin-left: 0;
+    margin-top: 5%;
+  }
+}
+
+.espacio_trabajo .tres_mascotas .card .titulo_masc h2 {
+  margin-bottom: 1rem;
+}
+
+.espacio_trabajo .tres_mascotas .card .titulo_masc h2 .mirar {
+  display: none;
+}
+
+.espacio_trabajo .tres_mascotas .card .titulo_masc h2 .mirar:hover .mirar {
+  display: block;
+}
+
+.espacio_trabajo .tres_mascotas .card .titulo_masc h2:hover .mirar {
+  display: block;
+}
+
+.espacio_trabajo .tres_mascotas .card .card-img-top {
+  object-fit: cover;
+  height: 100%;
+  position: inherit;
+  margin: auto;
+  padding: .2rem;
+  max-width: 40rem;
+  max-height: 40rem;
+  border: 5px solid #828282;
+}
+
+.espacio_trabajo .tres_mascotas .card .card-img-top:hover {
+  border: 10px solid #6FABF9;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+}
+
+.espacio_trabajo .tres_mascotas .card .icono {
+  width: auto;
+  text-align: center;
+  display: none;
+}
+
+@media (min-width: 400px) {
+  .espacio_trabajo .tres_mascotas .card .icono {
+    display: block;
+  }
+}
+
+.espacio_trabajo .tres_mascotas .card .imgmascota:hover {
+  border: 5px solid #B6B6B6;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+}
+
+.espacio_trabajo .tres_mascotas .cboton {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.espacio_trabajo .tres_mascotas .cboton button {
+  padding: 1rem 5rem;
+  border-radius: 10rem;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#64b8ff+0,54c8e5+46,64b8ff+100 */
+  background: #64b8ff;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64b8ff', endColorstr='#64b8ff',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  font-size: 2.2rem;
+  color: white;
+  font-family: "Merienda", cursive;
+  font-weight: 300;
+  font-weight: 600;
+}
+
+.espacio_trabajo .tres_mascotas .cboton button:hover {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a90329+0,ce0407+22,c40003+78,6d0019+100 */
+  background: #a90329;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #a90329 0%, #ce0407 22%, #c40003 78%, #6d0019 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #a90329 0%, #ce0407 22%, #c40003 78%, #6d0019 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #a90329 0%, #ce0407 22%, #c40003 78%, #6d0019 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=1 );
+  /* IE6-9 */
+}
+
+.espacio_trabajo .tres_mascotas .borrar {
+  margin: auto;
+  position: absolute;
+}
+
+.espacio_trabajo .tres_mascotas .borrar .boton_borrar {
+  border: none;
+  border-radius: 10rem;
+  padding: .5rem;
+}
+
+.espacio_trabajo .tres_mascotas .borrar .boton_borrar:hover {
+  background-color: #AEAEAE;
+}
+
+@media (min-width: 900px) {
+  .espacio_trabajo .tres_mascotas {
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 3rem;
+  }
+  .espacio_trabajo .tres_mascotas .vista {
+    flex: 0 0 calc( 50% - 0rem);
+  }
+}
+
+@media (min-width: 1100px) {
+  .espacio_trabajo .tres_mascotas {
+    max-width: 100rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .espacio_trabajo .tres_mascotas {
+    max-width: 130rem;
+  }
+  .espacio_trabajo .tres_mascotas .card {
+    display: grid;
+  }
+  .espacio_trabajo .tres_mascotas .carta_mascota {
+    padding-bottom: 0;
+  }
+  .espacio_trabajo .tres_mascotas .datos_mascota {
+    grid-template-rows: 55% 45%;
+  }
+  .espacio_trabajo .tres_mascotas .derecha {
+    grid-template-columns: 2fr 1fr;
+  }
+  .espacio_trabajo .tres_mascotas .derecha .imagen_catalogo {
+    grid-row: 1 / 3;
+  }
+  .espacio_trabajo .tres_mascotas .derecha .carta_mascota {
+    grid-row: 1 / 2;
+  }
+  .espacio_trabajo .tres_mascotas .izquierda {
+    grid-template-columns: 1fr 2fr;
+  }
+  .espacio_trabajo .tres_mascotas .izquierda .imagen_catalogo {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+  }
+  .espacio_trabajo .tres_mascotas .izquierda .carta_mascota {
+    grid-row: 1 / 2;
+  }
+  .espacio_trabajo .tres_mascotas .cboton {
+    margin: auto 1rem 2rem;
+  }
+  .espacio_trabajo .tres_mascotas .cboton button {
+    padding: 2% 0;
+    width: -webkit-fill-available;
+    border-radius: 1rem;
+  }
+}
+
+.espacio_trabajo .paginas {
+  padding: auto;
+  text-align: -webkit-center;
+}
+
+.espacio_trabajo .pagination {
+  margin: 2rem;
+  padding: 1rem 5%;
+  border-radius: 10rem;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#64b8ff+0,54c8e5+46,64b8ff+100 */
+  background: #64b8ff;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64b8ff', endColorstr='#64b8ff',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  width: min-content;
+}
+
+.espacio_trabajo .pagination .buttons_pagination {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#64b8ff+0,54c8e5+46,64b8ff+100 */
+  background: #64b8ff;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64b8ff', endColorstr='#64b8ff',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.espacio_trabajo .pagination .page-link {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.espacio_trabajo .pagination .page-link:hover {
+  background-color: white;
+  color: #525252;
+}
+
+.espacio_trabajo .pagination .no-mirar {
+  display: none;
+}
+
+.espacio_trabajo .filtro {
+  cursor: pointer;
+  padding: 2rem .5rem;
+  border: 5px solid #6FABF9;
+  margin-bottom: 0;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .espacio_trabajo .filtro {
+    display: block;
+  }
+}
+
+@media (min-width: 800px) {
+  .espacio_trabajo .filtro {
+    padding: 2rem;
+  }
+}
+
+.espacio_trabajo .filtro .nav {
+  justify-content: space-evenly;
+}
+
+.espacio_trabajo .filtro .nav .opcion .texto {
+  font-size: 2rem;
+  color: #4B8BDD;
+  font-family: "Merienda", cursive;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.espacio_trabajo .filtro .nav .opcion .texto:hover {
+  color: #FF1500;
+}
+
+@media (min-width: 768px) {
+  .espacio_trabajo .filtro .nav .opcion .texto {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .espacio_trabajo .filtro .nav .opcion .texto {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .espacio_trabajo .filtro .nav .opcion .texto {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .espacio_trabajo .filtro .nav .opcion .texto {
+    font-size: 3.5rem;
+  }
+}
+
+.espacio_trabajo .filtro .nav .opcion .fboton {
+  display: block;
+  background-color: white;
+  color: #6FABF9;
+  margin: 0 auto;
+  padding: 0 auto;
+  border: none;
+}
+
+.espacio_trabajo .filtro .nav .opcion .icon-tabler {
+  margin-right: 0rem;
+}
+
+@media (min-width: 768px) {
+  .espacio_trabajo .filtro .nav .opcion .icon-tabler {
+    width: 2.8rem;
+    height: auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .espacio_trabajo .filtro .nav .opcion .icon-tabler {
+    width: 3.4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .espacio_trabajo .filtro .nav .opcion .icon-tabler {
+    width: 3.8rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .espacio_trabajo .filtro .nav .opcion .icon-tabler {
+    width: 4rem;
+  }
+}
+
+.espacio_trabajo .filtro .nav .opcion ul {
+  display: none;
+  position: absolute;
+}
+
+.espacio_trabajo .filtro .nav .tipo:hover > .filtro_animal {
+  z-index: 10;
+  display: grid;
+  grid-gap: 2rem;
+  padding: 3rem;
+  border-bottom-right-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  border: 5px solid #6FABF9;
+  border-top: none;
+  margin-left: initial;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: white;
+}
+
+.espacio_trabajo .filtro .nav .tipo:hover > .filtro_animal button {
+  display: flex;
+  background-color: inherit;
+  border: none;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.2rem;
+  color: #656565;
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .espacio_trabajo .filtro .nav .tipo:hover > .filtro_animal button {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .espacio_trabajo .filtro .nav .tipo:hover > .filtro_animal button {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .espacio_trabajo .filtro .nav .tipo:hover > .filtro_animal button {
+    font-size: 2.7rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .espacio_trabajo .filtro .nav .tipo:hover > .filtro_animal button {
+    font-size: 2.8rem;
+  }
+}
+
+.espacio_trabajo .filtro .nav .tipo:hover > .filtro_animal button .animal {
+  width: 8rem;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .espacio_trabajo .filtro .nav .tipo:hover > .filtro_animal button .animal {
+    width: 8rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .espacio_trabajo .filtro .nav .tipo:hover > .filtro_animal button .animal {
+    width: 8.8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .espacio_trabajo .filtro .nav .tipo:hover > .filtro_animal button .animal {
+    width: 10rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .espacio_trabajo .filtro .nav .tipo:hover > .filtro_animal button .animal {
+    width: 12rem;
+  }
+}
+
+.espacio_trabajo .filtro .nav .tipo:hover > .filtro_animal .rojo {
+  color: #FF1500;
+}
+
+.espacio_trabajo .filtro .nav .peso:hover > .filtro_peso {
+  z-index: 10;
+  display: grid;
+  grid-gap: 2rem;
+  padding: 3rem;
+  border-bottom-right-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  border: 5px solid #6FABF9;
+  border-top: none;
+  margin-left: initial;
+  grid-template-columns: repeat(1, 1fr);
+  background-color: white;
+}
+
+.espacio_trabajo .filtro .nav .peso:hover > .filtro_peso button {
+  display: flex;
+  background-color: inherit;
+  border: none;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.4rem;
+  color: #656565;
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .espacio_trabajo .filtro .nav .peso:hover > .filtro_peso button {
+    font-size: 2.4rem;
+  }
+  .espacio_trabajo .filtro .nav .peso:hover > .filtro_peso button span {
+    margin-top: .5rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .espacio_trabajo .filtro .nav .peso:hover > .filtro_peso button {
+    font-size: 2.8rem;
+  }
+  .espacio_trabajo .filtro .nav .peso:hover > .filtro_peso button span {
+    margin-top: .6rem;
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .espacio_trabajo .filtro .nav .peso:hover > .filtro_peso button {
+    font-size: 3rem;
+  }
+  .espacio_trabajo .filtro .nav .peso:hover > .filtro_peso button span {
+    margin-top: .7rem;
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .espacio_trabajo .filtro .nav .peso:hover > .filtro_peso button {
+    font-size: 3.2rem;
+  }
+  .espacio_trabajo .filtro .nav .peso:hover > .filtro_peso button span {
+    margin-top: .8rem;
+    font-size: 2.4rem;
+  }
+}
+
+.espacio_trabajo .filtro .nav .peso:hover > .filtro_peso button:hover {
+  color: #4B8BDD;
+}
+
+.espacio_trabajo .filtro .nav .peso:hover > .filtro_peso .rojo {
+  color: #FF1500;
+}
+
+.espacio_trabajo .filtro .nav .peso:hover > .filtro_peso .rojo:hover {
+  color: #FF1500;
+}
+
+.espacio_trabajo .filtro .nav .boton {
+  display: none;
+}
+
+.espacio_trabajo .overlay {
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  visibility: hidden;
+}
+
+.espacio_trabajo .overlay .popup {
+  background: #F8F8F8;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  padding: 20px;
+  padding-top: 5px;
+  text-align: center;
+  width: 600px;
+  background-color: white;
+  transition: .3s ease all;
+  transform: scale(0.7);
+  opacity: 0;
+  height: 70%;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin: auto 2.7rem;
+}
+
+.espacio_trabajo .overlay .popup .superior {
+  display: flex;
+}
+
+.espacio_trabajo .overlay .popup .borrar {
+  margin: auto;
+}
+
+.espacio_trabajo .overlay .popup .borrar .boton_borrar {
+  border: none;
+  border-radius: 10rem;
+  padding: 1rem;
+  position: inherit;
+  font-size: 16px;
+  line-height: 16px;
+  display: block;
+  text-align: right;
+  transition: .3s ease all;
+  color: #BBBBBB;
+  margin: auto 0 auto auto;
+  font-size: 1.8rem;
+}
+
+.espacio_trabajo .overlay .popup .borrar .boton_borrar:hover {
+  background-color: #AEAEAE;
+  color: black;
+}
+
+.espacio_trabajo .overlay .popup::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.espacio_trabajo .overlay .popup::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+
+.espacio_trabajo .overlay .popup::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.espacio_trabajo .overlay .popup::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.espacio_trabajo .overlay .popup::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+.espacio_trabajo .overlay .popup h3 {
+  font-size: 3rem;
+  color: #828282;
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  opacity: 0;
+}
+
+@media (min-width: 400px) {
+  .espacio_trabajo .overlay .popup h3 {
+    font-size: 3.2rem;
+  }
+}
+
+@media (min-width: 550px) {
+  .espacio_trabajo .overlay .popup h3 {
+    font-size: 3.4rem;
+  }
+}
+
+@media (min-width: 650px) {
+  .espacio_trabajo .overlay .popup h3 {
+    font-size: 3.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .espacio_trabajo .overlay .popup h3 {
+    font-size: 4rem;
+  }
+}
+
+.espacio_trabajo .overlay .popup h4 {
+  font-weight: 300;
+  opacity: 0;
+}
+
+.espacio_trabajo .overlay .popup .al {
+  cursor: default;
+}
+
+.espacio_trabajo .overlay .popup .texto {
+  font-size: 2.5rem;
+  color: #4B8BDD;
+  font-family: "Merienda", cursive;
+  font-weight: 500;
+}
+
+@media (min-width: 400px) {
+  .espacio_trabajo .overlay .popup .texto {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width: 550px) {
+  .espacio_trabajo .overlay .popup .texto {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 650px) {
+  .espacio_trabajo .overlay .popup .texto {
+    font-size: 3.3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .espacio_trabajo .overlay .popup .texto {
+    font-size: 3.6rem;
+  }
+}
+
+.espacio_trabajo .overlay .popup .filtro_animal {
+  display: grid;
+  grid-gap: 2rem;
+  padding: 1rem;
+  border-top: none;
+  margin-left: initial;
+  background-color: white;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 500px) {
+  .espacio_trabajo .overlay .popup .filtro_animal {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.espacio_trabajo .overlay .popup .filtro_animal button {
+  display: flex;
+  background-color: inherit;
+  border: none;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.2rem;
+  color: #656565;
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .espacio_trabajo .overlay .popup .filtro_animal button {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .espacio_trabajo .overlay .popup .filtro_animal button {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .espacio_trabajo .overlay .popup .filtro_animal button {
+    font-size: 2.7rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .espacio_trabajo .overlay .popup .filtro_animal button {
+    font-size: 2.8rem;
+  }
+}
+
+.espacio_trabajo .overlay .popup .filtro_animal button .animal {
+  width: 5rem;
+  height: auto;
+}
+
+@media (min-width: 400px) {
+  .espacio_trabajo .overlay .popup .filtro_animal button .animal {
+    width: 6rem;
+  }
+}
+
+@media (min-width: 550px) {
+  .espacio_trabajo .overlay .popup .filtro_animal button .animal {
+    width: 6.5rem;
+  }
+}
+
+@media (min-width: 650px) {
+  .espacio_trabajo .overlay .popup .filtro_animal button .animal {
+    width: 7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .espacio_trabajo .overlay .popup .filtro_animal button .animal {
+    width: 8rem;
+  }
+}
+
+.espacio_trabajo .overlay .popup .filtro_animal .rojo {
+  color: #FF1500;
+}
+
+.espacio_trabajo .overlay .popup .filtro_peso {
+  display: grid;
+  grid-gap: 2rem;
+  padding: 1rem;
+  border-top: none;
+  margin-left: initial;
+  background-color: white;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 580px) {
+  .espacio_trabajo .overlay .popup .filtro_peso {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.espacio_trabajo .overlay .popup .filtro_peso button {
+  display: flex;
+  background-color: inherit;
+  border: none;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.4rem;
+  color: #656565;
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .espacio_trabajo .overlay .popup .filtro_peso button {
+    font-size: 2.4rem;
+  }
+  .espacio_trabajo .overlay .popup .filtro_peso button span {
+    margin-top: .5rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .espacio_trabajo .overlay .popup .filtro_peso button {
+    font-size: 2.8rem;
+  }
+  .espacio_trabajo .overlay .popup .filtro_peso button span {
+    margin-top: .6rem;
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .espacio_trabajo .overlay .popup .filtro_peso button {
+    font-size: 3rem;
+  }
+  .espacio_trabajo .overlay .popup .filtro_peso button span {
+    margin-top: .7rem;
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .espacio_trabajo .overlay .popup .filtro_peso button {
+    font-size: 3.2rem;
+  }
+  .espacio_trabajo .overlay .popup .filtro_peso button span {
+    margin-top: .8rem;
+    font-size: 2.4rem;
+  }
+}
+
+.espacio_trabajo .overlay .popup .filtro_peso button:hover {
+  color: #FF1500;
+}
+
+.espacio_trabajo .overlay .popup .filtro_peso .rojo {
+  color: #FF1500;
+}
+
+.espacio_trabajo .overlay .popup .filtro_peso .rojo:hover {
+  color: #656565;
+}
+
+.espacio_trabajo .overlay .popup .boto .fboton {
+  display: block;
+  background-color: white;
+  color: #6FABF9;
+  margin: 0 auto;
+  padding: 0 auto;
+  border: none;
+  cursor: pointer;
+}
+
+.espacio_trabajo .overlay .popup .boto .texto:hover {
+  color: #FF1500;
+}
+
+.espacio_trabajo .overlay .popup .boto .icon-tabler {
+  margin-right: 0rem;
+  width: 2.8rem;
+}
+
+@media (min-width: 400px) {
+  .espacio_trabajo .overlay .popup .boto .icon-tabler {
+    width: 3.4rem;
+    height: auto;
+  }
+}
+
+@media (min-width: 550px) {
+  .espacio_trabajo .overlay .popup .boto .icon-tabler {
+    width: 3.8rem;
+  }
+}
+
+@media (min-width: 650px) {
+  .espacio_trabajo .overlay .popup .boto .icon-tabler {
+    width: 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .espacio_trabajo .overlay .popup .boto .icon-tabler {
+    width: 4.5rem;
+  }
+}
+
+.espacio_trabajo .overlay .popup .form .contenedor-inputs {
+  opacity: 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.espacio_trabajo .overlay .popup .form hr {
+  height: 3px;
+  background-color: black;
+}
+
+.espacio_trabajo .overlay .popup .form .filtrar {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 580px) {
+  .espacio_trabajo .overlay .popup .form .filtrar {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.espacio_trabajo .overlay .popup .form .filtrar button {
+  border: 2px solid #6FABF9;
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
+
+.espacio_trabajo .active {
+  visibility: visible;
+  scrollbar-base-color: #6FABF9;
+}
+
+.espacio_trabajo .popup.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.espacio_trabajo .popup.active h3 {
+  animation: entradaTitulo .8s ease .5s forwards;
+}
+
+.espacio_trabajo .popup.active h4 {
+  animation: entradaSubtitulo .8s ease .5s forwards;
+}
+
+.espacio_trabajo .popup.active .contenedor-inputs {
+  animation: entradaInputs 1s linear 1s forwards;
+}
+
+@keyframes entradaTitulo {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes entradaSubtitulo {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes entradaInputs {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.espacio_trabajo .filtrar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .espacio_trabajo .filtrar {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.espacio_trabajo .fil {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .espacio_trabajo .fil {
+    display: none;
+  }
+}
+
+.espacio_trabajo .boton_filtrar {
+  margin-top: 0rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .espacio_trabajo .boton_filtrar {
+    margin-top: .5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .espacio_trabajo .boton_filtrar .btn {
+    font-size: 2.8rem;
+  }
+}
+
+.espacio_trabajo .boton_filtrar .filt {
+  margin-top: 0;
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+.espacio_trabajo .boton_filtrar .limpiar {
+  margin-top: 0;
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+.espacio_trabajo .cuidados {
+  display: grid;
+  grid-gap: 2rem;
+  margin: 4rem auto;
+}
+
+@media (min-width: 453px) {
+  .espacio_trabajo .cuidados {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 800px) {
+  .espacio_trabajo .cuidados {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .espacio_trabajo .cuidados {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 100rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .espacio_trabajo .cuidados {
+    max-width: 130rem;
+  }
+}
+
+.espacio_trabajo .cuidados .cuidar {
+  display: grid;
+  grid-row-gap: 2rem;
+  background-color: white;
+  border: 5px solid #6FABF9;
+  border-radius: 100rem;
+  overflow: hidden;
+  grid-template-rows: min-content auto;
+}
+
+.espacio_trabajo .cuidados .cuidar .imagen {
+  border-radius: 50%;
+  max-width: 40rem;
+  max-height: 40rem;
+  overflow: hidden;
+  border: 2px solid #828282;
+}
+
+.espacio_trabajo .cuidados .cuidar .imagen:hover {
+  border: 5px solid #6FABF9;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+}
+
+.espacio_trabajo .cuidados .cuidar .consejos {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 3rem 10rem;
+  margin-bottom: auto;
+}
+
+.espacio_trabajo .cuidados .cuidar .consejos .mascota {
+  font-size: 3rem;
+  color: #4B8BDD;
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 550px) {
+  .espacio_trabajo .cuidados .cuidar .consejos .mascota {
+    font-size: 3.2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .espacio_trabajo .cuidados .cuidar .consejos .mascota {
+    font-size: 3.4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .espacio_trabajo .cuidados .cuidar .consejos .mascota {
+    font-size: 3.6rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .espacio_trabajo .cuidados .cuidar .consejos .mascota {
+    font-size: 4rem;
+  }
+}
+
+.espacio_trabajo .cuidados .cuidar .consejos p {
+  text-align: justify;
+  font-size: 1.8rem;
+  color: #656565;
+  font-family: "Merienda", cursive;
+  font-weight: 400;
+}
+
+@media (min-width: 550px) {
+  .espacio_trabajo .cuidados .cuidar .consejos p {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .espacio_trabajo .cuidados .cuidar .consejos p {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .espacio_trabajo .cuidados .cuidar .consejos p {
+    font-size: 2.6rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .espacio_trabajo .cuidados .izquierda {
+    grid-column-gap: 1rem;
+    grid-template-rows: 1fr;
+    grid-template-columns: 30rem auto;
+  }
+  .espacio_trabajo .cuidados .izquierda .consejos {
+    justify-content: space-evenly;
+    padding: 1rem 10rem 1rem 2rem;
+    margin-bottom: 0;
+  }
+  .espacio_trabajo .cuidados .izquierda .consejos p {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .espacio_trabajo .cuidados .derecha {
+    grid-column-gap: 1rem;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto 30rem;
+  }
+  .espacio_trabajo .cuidados .derecha .imagen {
+    grid-column: 2/3;
+  }
+  .espacio_trabajo .cuidados .derecha .consejos {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    justify-content: space-evenly;
+    padding: 1rem 2rem 1rem 10rem;
+    margin-bottom: 0;
+  }
+  .espacio_trabajo .cuidados .derecha .consejos p {
+    text-align: right;
+  }
+}
+
+.espacio_trabajo .no_mascotas {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem;
+  text-align: center;
+  border-radius: 10rem;
+  padding: 1rem 3rem 3rem;
+  background-color: white;
+  max-width: 90rem;
+  border: 5px solid #6FABF9;
+  overflow: hidden;
+}
+
+.espacio_trabajo .no_mascotas img {
+  margin: auto;
+  align-items: center;
+}
+
+@media (min-width: 650px) {
+  .espacio_trabajo .no_mascotas img {
+    max-width: 50rem;
+  }
+}
+
+.espacio_trabajo .no_mascotas h3 {
+  font-size: 2rem;
+  color: #656565;
+  font-family: "Merienda", cursive;
+  font-weight: 600;
+}
+
+@media (min-width: 500px) {
+  .espacio_trabajo .no_mascotas h3 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .espacio_trabajo .no_mascotas h3 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .espacio_trabajo .no_mascotas h3 {
+    font-size: 3.3rem;
+  }
+}
+
+.espacio_trabajo .no_mascotas h4 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #AEAEAE;
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 600;
+}
+
+@media (min-width: 500px) {
+  .espacio_trabajo .no_mascotas h4 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .espacio_trabajo .no_mascotas h4 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .espacio_trabajo .no_mascotas h4 {
+    font-size: 2.8rem;
+  }
+}
+
+.selcion {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin-bottom: 2rem;
+}
+
+.selcion .pregistro, .selcion .pingreso {
+  margin: 0 2rem;
+  padding: 3rem 2rem;
+}
+
+.selcion .informacion {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#64b8ff+0,54c8e5+46,64b8ff+100 */
+  background: #64b8ff;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64b8ff', endColorstr='#64b8ff',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  border-radius: 5rem;
+}
+
+.selcion .informacion .sub {
+  margin-bottom: 1rem;
+  font-size: 3.4rem;
+  color: white;
+  font-family: "Merienda", cursive;
+  font-weight: 600;
+}
+
+@media (min-width: 890px) {
+  .selcion {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .selcion .pregistro {
+    margin: 0;
+    margin-right: 2rem;
+  }
+  .selcion .pingreso {
+    margin: 0;
+    margin-left: 2rem;
+  }
+}
+
+.selcion .flip {
+  -moz-transform: scaleX(-1);
+  /* Firefox */
+  -o-transform: scaleX(-1);
+  /* Opera */
+  -webkit-transform: scaleX(-1);
+  /* Chrome y Safari */
+  transform: scaleX(-1);
+  /* w3org */
+  filter: FlipH;
+  /* Internet Explorer */
+}
+
+.registrar {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 2rem;
+}
+
+.registrar .datos_contenedor {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.registrar .texto, .registrar label {
+  font-size: 2.8rem;
+  color: white;
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 600;
+  margin: 1rem;
+}
+
+.registrar input {
+  font-size: 2.8rem;
+  color: black;
+  font-family: "Merienda", cursive;
+  font-weight: 600;
+  width: 99%;
+  padding: 1rem 2rem;
+  margin: 0;
+  border-radius: 2rem;
+  border: none;
+  font-size: 2rem;
+}
+
+.registrar .mas {
+  text-transform: capitalize;
+}
+
+.registrar .error_msg {
+  position: relative;
+  margin: 0;
+  margin-top: 1rem;
+  text-align: left;
+  padding: 1rem;
+  max-width: fit-content;
+  font-size: 17px;
+  font-weight: 400;
+  border: solid;
+  border-radius: 2rem;
+  font-size: 2.2rem;
+  color: #c03b3b;
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 500;
+}
+
+.registrar .espacio {
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.registrar .boton2 {
+  margin-top: 1rem;
+  margin-right: 2rem;
+  padding: 1.3rem;
+  font-size: 3rem;
+  color: black;
+  font-family: "Merienda", cursive;
+  font-weight: 300;
+  border-radius: 3rem;
+  background-color: white;
+}
+
+.registrar .error {
+  border: solid;
+  border-color: red;
+}
+
+.registrar .pnombre, .registrar .pcontra {
+  grid-column: 1 / 3;
+}
+
+@media (min-width: 700px) {
+  .registrar .pnombre, .registrar .pcontra {
+    grid-column: 1 / 2;
+  }
+}
+
+@media (min-width: 890px) {
+  .registrar .pnombre, .registrar .pcontra {
+    grid-column: 1 / 3;
+  }
+}
+
+@media (min-width: 1305px) {
+  .registrar .pnombre, .registrar .pcontra {
+    grid-column: 1 / 2;
+  }
+}
+
+.registrar .papellido, .registrar .prepit {
+  grid-column: 1 / 3;
+}
+
+@media (min-width: 700px) {
+  .registrar .papellido, .registrar .prepit {
+    grid-column: 2 / 3;
+  }
+}
+
+@media (min-width: 890px) {
+  .registrar .papellido, .registrar .prepit {
+    grid-column: 1 / 3;
+  }
+}
+
+@media (min-width: 1305px) {
+  .registrar .papellido, .registrar .prepit {
+    grid-column: 2 / 3;
+  }
+}
+
+.registrar .pemail, .registrar .pcelular, .registrar .espacio, .registrar .botonf {
+  grid-column: 1 / 3;
+}
+
+.centrado {
+  margin: 15% 2rem;
+}
+
+.centrado .boton2 {
+  margin-top: 0rem;
+  margin-right: 2rem;
+  padding: 1.3rem;
+  font-size: 3rem;
+  color: black;
+  font-family: "Merienda", cursive;
+  font-weight: 300;
+  border: none;
+  border-radius: 3rem;
+  background-color: white;
+}
+
+.centrado .olvidar {
+  display: flex;
+  justify-content: flex-start;
+  margin: 1rem 0;
+}
+
+.centrado .olvidar .boton3 {
+  text-decoration: underline;
+  margin: 0;
+  background-color: unset;
+  color: #A400AA;
+  border: none;
+}
+
+.centrado .olvidar .boton3:hover {
+  color: red;
+}
+
+.ingresar {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-rows: repeat(2, 1fr);
+  margin-top: 5rem;
+}
+
+.ingresar .orden {
+  display: flex;
+}
+
+.ingresar .texto {
+  font-size: 2.5rem;
+  color: white;
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 600;
+  margin-right: 2rem;
+}
+
+.ingresar input {
+  width: 99%;
+  padding: 1rem;
+  margin: auto;
+  border-radius: 2rem;
+  border: none;
+  font-size: 2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.centrar {
+  display: flex;
+  text-align: center;
+  margin: auto 0rem auto 2rem;
+  border: none;
+  background-color: unset;
+  justify-content: left;
+}
+
+.opcion:hover {
+  display: block;
+}
+
+.opcion .vmenu {
+  position: relative;
+}
+
+.opcion .vmenu ul {
+  margin: 0rem 0 0 -3rem;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#64b8ff+0,54c8e5+46,64b8ff+100 */
+  background: #64b8ff;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64b8ff', endColorstr='#64b8ff',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  position: absolute;
+  display: none;
+  border-radius: 3.5rem;
+  padding: 2rem 2rem 2rem 4rem;
+}
+
+.opcion .vmenu .icon-tabler-menu {
+  stroke: #000000;
+  width: 44px;
+  height: 44px;
+  stroke-width: 2.5px;
+}
+
+.opcion .vmenu:hover ul {
+  display: block !important;
+  z-index: 30;
+}
+
+.opcion .vmenu:hover .icon-tabler-menu {
+  stroke: #ffffff;
+}
+
+.opcion .vmenu .home, .opcion .vmenu a {
+  color: white;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  min-width: 100px;
+  border: none;
+  background-color: unset;
+  font-size: 3rem;
+  color: #2E4E91;
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 600;
+}
+
+.opcion .vmenu .home:hover, .opcion .vmenu a:hover {
+  color: #F45770;
+}
+
+.recuperar {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#64b8ff+0,54c8e5+46,64b8ff+100 */
+  background: #64b8ff;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64b8ff', endColorstr='#64b8ff',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  padding: 5rem 4rem;
+  margin: 1rem 7% 2rem;
+  border-radius: 5rem;
+}
+
+.recuperar h2 {
+  margin: auto;
+  font-size: 3rem;
+  color: #2E4E91;
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.recuperar .contraseña h3 {
+  font-size: 3rem;
+  color: #2E4E91;
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 600;
+  margin: 2rem 1rem;
+}
+
+.recuperar .contraseña input {
+  width: 99%;
+  padding: 1rem;
+  margin: auto;
+  border-radius: 2rem;
+  border: none;
+  font-size: 2rem;
+}
+
+.recuperar .contraseña .error {
+  border: solid;
+  border-color: red;
+}
+
+.recuperar .boton .boton2 {
+  margin-top: 2rem;
+  margin-right: 2rem;
+  padding: 1.3rem;
+  font-size: 3rem;
+  color: black;
+  font-family: "Merienda", cursive;
+  font-weight: 300;
+  border: none;
+  border-radius: 3rem;
+  background-color: white;
+}
+
+.activacion {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#64b8ff+0,54c8e5+46,64b8ff+100 */
+  background: #64b8ff;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64b8ff', endColorstr='#64b8ff',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  padding: 4rem 5rem;
+}
+
+.activacion h2 {
+  font-size: 3rem;
+  color: #2E4E91;
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.separacion {
+  display: grid;
+  padding: 0 2rem;
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 2rem;
+}
+
+.separacion .usuario {
+  display: grid;
+  margin: auto;
+  width: 100%;
+  background-color: white;
+  padding: 3rem 2rem;
+  border-radius: 5rem;
+  grid-gap: 1rem;
+}
+
+.separacion .usuario .datos h3 {
+  font-size: 2.5rem;
+  color: #6FABF9;
+  font-family: "Aclonica", sans-serif;
+  font-weight: 600;
+}
+
+.separacion .usuario .datos h3 span {
+  display: none;
+}
+
+.separacion .usuario .datos h2 {
+  font-size: 2rem;
+  color: #828282;
+  font-family: "Aclonica", sans-serif;
+  font-weight: 500;
+  margin: 1.2rem auto 1rem 2rem;
+}
+
+.separacion .usuario .datos hr {
+  height: 3px;
+  background-color: black;
+}
+
+@media (min-width: 700px) {
+  .separacion .usuario .datos {
+    display: grid;
+    grid-template-columns: 15rem auto;
+  }
+  .separacion .usuario .datos hr {
+    grid-column: 1 / 3;
+  }
+  .separacion .usuario .datos h3 {
+    margin-top: auto;
+    text-align: left;
+    align-items: center;
+  }
+  .separacion .usuario .datos h3 span {
+    display: unset;
+  }
+}
+
+.separacion .usuario .datos .cambiar {
+  display: flex;
+  flex-direction: column;
+}
+
+.separacion .usuario .datos .cambiar .Horizontal {
+  display: block;
+}
+
+.separacion .usuario .datos .cambiar .vertical {
+  display: none;
+  width: 2rem;
+}
+
+@media (min-width: 700px) {
+  .separacion .usuario .datos .cambiar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .separacion .usuario .datos .cambiar .Horizontal {
+    display: none;
+  }
+  .separacion .usuario .datos .cambiar .vertical {
+    display: block;
+    margin: auto 0.7rem;
+  }
+}
+
+.separacion .usuario .datos .cambiar .form-control {
+  width: 99%;
+  padding: .5rem 1rem;
+  margin: auto;
+  border-radius: 5rem;
+  border-style: 5rem;
+  font-size: 2rem;
+  color: #828282;
+  font-family: "Aclonica", sans-serif;
+  font-weight: 500;
+  border-color: #64B8FF;
+}
+
+.botones {
+  width: 100%;
+}
+
+.botones .btn {
+  display: block;
+  background-color: white;
+  color: #6FABF9;
+  margin: 1rem;
+  padding: 1.2rem 2rem;
+  border-radius: 5rem;
+  font-size: 2.2rem;
+  color: #828282;
+  font-family: "Merienda", cursive;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .botones .btn {
+    width: -webkit-fill-available;
+  }
+}
+
+.botones .btn:hover {
+  border: 5px solid #B6B6B6;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#64b8ff+0,54c8e5+46,64b8ff+100 */
+  background: #64b8ff;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64b8ff', endColorstr='#64b8ff',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  color: white;
+}
+
+.botones .cambios {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rmascota {
+  display: flex;
+  margin: 1rem auto;
+  flex-direction: column;
+  padding: 0 3rem;
+}
+
+@media (min-width: 400px) {
+  .rmascota {
+    padding: 0 10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .rmascota {
+    width: 110rem;
+  }
+}
+
+.rmascota .mascotas_registro {
+  display: grid;
+  background-color: white;
+  max-width: 200rem;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 3rem;
+  border: #AEAEAE 5px solid;
+  border-radius: 5rem;
+  margin-bottom: 5rem;
+  -webkit-box-shadow: 28px 24px 45px -2px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 28px 24px 45px -2px rgba(0, 0, 0, 0.7);
+  box-shadow: 28px 24px 45px -2px rgba(0, 0, 0, 0.7);
+}
+
+@media (min-width: 400px) {
+  .rmascota .mascotas_registro {
+    padding: 3rem 5rem;
+  }
+}
+
+@media (min-width: 580px) {
+  .rmascota .mascotas_registro {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.rmascota .mascotas_registro .intro {
+  font-size: 2.5rem;
+  color: black;
+  font-family: "Merienda", cursive;
+  font-weight: 300;
+  margin: .5rem 0 0.5rem;
+}
+
+@media (min-width: 500px) {
+  .rmascota .mascotas_registro .intro {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 580px) {
+  .rmascota .mascotas_registro .intro {
+    grid-column: 1 / 3;
+  }
+}
+
+@media (min-width: 1200px) {
+  .rmascota .mascotas_registro .intro {
+    font-size: 4rem;
+  }
+}
+
+.rmascota .mascotas_registro .datos {
+  display: flex;
+  flex-direction: column;
+}
+
+.rmascota .mascotas_registro .datos h3 {
+  text-align: left;
+  font-size: 1.8rem;
+  color: #656565;
+  font-family: "Merienda", cursive;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .rmascota .mascotas_registro .datos h3 {
+    font-size: 2.2rem;
+  }
+}
+
+.rmascota .mascotas_registro .datos .inscribir {
+  width: 99%;
+  padding: .5rem 1rem;
+  margin: 0 auto;
+  border-radius: 5rem;
+  border: #4B8BDD 3px solid;
+  font-size: 1.7rem;
+  color: #828282;
+  font-family: "Aclonica", sans-serif;
+  font-weight: 500;
+  background-color: white;
+  border-color: #64B8FF;
+}
+
+@media (min-width: 500px) {
+  .rmascota .mascotas_registro .datos .inscribir {
+    font-size: 2rem;
+  }
+}
+
+.rmascota .mascotas_registro .datos .seleccion option {
+  border: #4B8BDD 3px solid;
+}
+
+.rmascota .mascotas_registro .datos textarea {
+  width: 99%;
+  resize: none;
+  padding: .5rem 1rem;
+  margin: 0 auto;
+  border-radius: 2rem;
+  border: 3px solid #4B8BDD;
+  font-size: 1.8rem;
+  color: #828282;
+  font-family: "Aclonica", sans-serif;
+  font-weight: 500;
+  background-color: white;
+  border-color: #64B8FF;
+  height: 12rem;
+}
+
+.rmascota .mascotas_registro .datos .progress {
+  padding: 0rem 0rem 2.5rem;
+  border: 2px solid #4B8BDD;
+  position: relative;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#99d9f7+0,aadeff+100 */
+  background: #99d9f7;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #99d9f7 0%, #aadeff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #99d9f7 0%, #aadeff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #99d9f7 0%, #aadeff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99d9f7', endColorstr='#aadeff',GradientType=0 );
+  /* IE6-9 */
+  border-radius: 5rem;
+  height: 4.5rem;
+  cursor: pointer;
+}
+
+.rmascota .mascotas_registro .datos .progress .bar {
+  background-color: white;
+  padding: 1rem 1rem 3.5rem 0;
+  width: 50%;
+  height: 20px;
+  transition: width 150ms;
+  background: #64b8ff;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64b8ff', endColorstr='#64b8ff',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.rmascota .mascotas_registro .datos .progress .percent {
+  position: absolute;
+  display: inline-block;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  color: white;
+  font-family: "Aclonica", sans-serif;
+  font-weight: 600;
+  -webkit-text-stroke: 1px #4B8BDD;
+}
+
+.rmascota .mascotas_registro .datos .dropbox {
+  outline: 2px dashed #6FABF9;
+  outline-offset: -10px;
+  background: lightcyan;
+  color: #64B8FF;
+  padding: 10px 10px;
+  min-height: 100px;
+  position: relative;
+  cursor: pointer;
+}
+
+.rmascota .mascotas_registro .datos .dropbox:hover {
+  background: lightblue;
+}
+
+.rmascota .mascotas_registro .datos .dropbox .input-file {
+  opacity: 0;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.rmascota .mascotas_registro .datos .dropbox p {
+  font-size: 0.9em;
+  text-align: center;
+  justify-content: center;
+  padding: 0;
+  margin: 8rem 3rem;
+  font-size: 1.5rem;
+  color: #AEAEAE;
+  font-family: "Merienda", cursive;
+  font-weight: 500;
+}
+
+.rmascota .mascotas_registro .datos img {
+  max-height: 25rem;
+  margin: 0 auto;
+}
+
+.rmascota .mascotas_registro .info {
+  font-size: 1.3rem;
+  color: red;
+  font-family: "Merienda", cursive;
+  font-weight: 500;
+  font-style: italic;
+  margin: 0;
+}
+
+.rmascota .mascotas_registro .imagen {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 650px) {
+  .rmascota .mascotas_registro .imagen {
+    grid-template-columns: 40% 60%;
+  }
+  .rmascota .mascotas_registro .imagen h3 {
+    grid-column: 1/3;
+  }
+  .rmascota .mascotas_registro .imagen .dropbox {
+    grid-column: 1/2;
+  }
+}
+
+.rmascota .mascotas_registro .botones .publicar {
+  color: black;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#99d9f7+0,aadeff+100 */
+  background: #99d9f7;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #99d9f7 0%, #aadeff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #99d9f7 0%, #aadeff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #99d9f7 0%, #aadeff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99d9f7', endColorstr='#aadeff',GradientType=0 );
+  /* IE6-9 */
+}
+
+.rmascota .mascotas_registro .botones .publicar:hover {
+  color: white;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#64b8ff+0,54c8e5+46,64b8ff+100 */
+  background: #64b8ff;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64b8ff', endColorstr='#64b8ff',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.rmascota .mascotas_registro .botones .cancelar {
+  color: black;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff2323+0,ff4f4f+50,f22e2e+100 */
+  background: #ff2323;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #ff2323 0%, #ff4f4f 50%, #f22e2e 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #ff2323 0%, #ff4f4f 50%, #f22e2e 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #ff2323 0%, #ff4f4f 50%, #f22e2e 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2323', endColorstr='#f22e2e',GradientType=1 );
+  /* IE6-9 */
+}
+
+.rmascota .mascotas_registro .botones .cancelar:hover {
+  color: white;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff611e+0,ff0000+50,ff6e00+100 */
+  background: #ff611e;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ff611e 0%, red 50%, #ff6e00 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ff611e 0%, red 50%, #ff6e00 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ff611e 0%, red 50%, #ff6e00 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff611e', endColorstr='#ff6e00',GradientType=0 );
+  /* IE6-9 */
+}
+
+@media (min-width: 580px) {
+  .rmascota .mascotas_registro .botones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .rmascota .mascotas_registro .botones .publicar {
+    grid-column: 1/2;
+  }
+  .rmascota .mascotas_registro .botones .cancelar {
+    grid-column: 2/3;
+  }
+}
+
+@media (min-width: 580px) {
+  .rmascota .mascotas_registro .nombre, .rmascota .mascotas_registro .raza {
+    grid-column: 1/3;
+  }
+}
+
+@media (min-width: 850px) {
+  .rmascota .mascotas_registro .nombre, .rmascota .mascotas_registro .raza {
+    grid-column: 1/2;
+  }
+}
+
+@media (min-width: 580px) {
+  .rmascota .mascotas_registro .tipo, .rmascota .mascotas_registro .peso {
+    grid-column: 1/3;
+  }
+}
+
+@media (min-width: 850px) {
+  .rmascota .mascotas_registro .tipo, .rmascota .mascotas_registro .peso {
+    grid-column: 2/3;
+  }
+}
+
+.rmascota .mascotas_registro .Mensaje, .rmascota .mascotas_registro .imagen, .rmascota .mascotas_registro .botones {
+  grid-column: 1/2;
+}
+
+@media (min-width: 580px) {
+  .rmascota .mascotas_registro .Mensaje, .rmascota .mascotas_registro .imagen, .rmascota .mascotas_registro .botones {
+    grid-column: 1/3;
+  }
+}
+
+.info_mascota {
+  display: grid;
+  grid-column-gap: 0rem;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#99d9f7+0,aadeff+100 */
+  background: #99d9f7;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #99d9f7 0%, #aadeff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #99d9f7 0%, #aadeff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #99d9f7 0%, #aadeff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99d9f7', endColorstr='#aadeff',GradientType=0 );
+  /* IE6-9 */
+  margin: 0rem 5% 5rem 5%;
+  overflow: hidden;
+  border: #828282 4px solid;
+  border-radius: 3rem;
+  -webkit-box-shadow: 28px 24px 45px -2px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 28px 24px 45px -2px rgba(0, 0, 0, 0.7);
+  box-shadow: 28px 24px 45px -2px rgba(0, 0, 0, 0.7);
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 900px) {
+  .info_mascota {
+    grid-template-columns: 65% 35%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .info_mascota {
+    grid-template-columns: 60% 40%;
+    margin: 0rem auto 5rem;
+    max-width: 110rem;
+  }
+}
+
+.info_mascota .imagen {
+  display: flex;
+  height: 100%;
+}
+
+.info_mascota .imagen .imageninfoMascota {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  position: inherit;
+  margin: auto;
+  padding: .2rem;
+  max-height: 60rem;
+}
+
+.info_mascota .informacion {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
+  margin: 1rem 0;
+}
+
+@media (min-width: 900px) {
+  .info_mascota .informacion {
+    border-left: #828282 5px solid;
+  }
+}
+
+.info_mascota .informacion .logo {
+  display: flex;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.info_mascota .informacion .logo span {
+  margin-left: 0;
+}
+
+.info_mascota .informacion .logo .icono {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 5rem;
+  border: black 5px solid;
+  display: none;
+}
+
+@media (min-width: 333px) {
+  .info_mascota .informacion .logo .icono {
+    display: block;
+  }
+}
+
+@media (min-width: 900px) {
+  .info_mascota .informacion .logo .icono {
+    display: none;
+  }
+}
+
+@media (min-width: 1030px) {
+  .info_mascota .informacion .logo .icono {
+    display: block;
+  }
+}
+
+.info_mascota .informacion .logo .texto {
+  margin: auto 1rem;
+  font-size: 5rem;
+}
+
+.info_mascota .informacion .logo .texto span {
+  font-size: 4rem;
+}
+
+@media (min-width: 400px) {
+  .info_mascota .informacion .logo .texto {
+    font-size: 6rem;
+  }
+  .info_mascota .informacion .logo .texto span {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .info_mascota .informacion .logo .texto {
+    font-size: 7rem;
+  }
+  .info_mascota .informacion .logo .texto span {
+    font-size: 6rem;
+  }
+}
+
+.info_mascota .informacion .datos {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-row-gap: 1rem;
+  border-top: #828282 4px solid;
+  border-bottom: #828282 4px solid;
+  align-self: center;
+}
+
+@media (min-width: 550px) {
+  .info_mascota .informacion .datos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .info_mascota .informacion .datos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .info_mascota .informacion .datos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.info_mascota .informacion .datos .izquierda, .info_mascota .informacion .datos .derecha {
+  display: grid;
+  background-color: white;
+  font-size: 2.5rem;
+  color: #6FABF9;
+  font-family: "Aclonica", sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+.info_mascota .informacion .datos .izquierda span, .info_mascota .informacion .datos .derecha span {
+  font-size: 2rem;
+  color: #656565;
+  font-family: "Merienda", cursive;
+  font-weight: 500;
+}
+
+@media (min-width: 333px) {
+  .info_mascota .informacion .datos .izquierda, .info_mascota .informacion .datos .derecha {
+    display: block;
+  }
+}
+
+@media (min-width: 550px) {
+  .info_mascota .informacion .datos .izquierda, .info_mascota .informacion .datos .derecha {
+    display: grid;
+    font-size: 3rem;
+  }
+  .info_mascota .informacion .datos .izquierda span, .info_mascota .informacion .datos .derecha span {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 650px) {
+  .info_mascota .informacion .datos .izquierda, .info_mascota .informacion .datos .derecha {
+    display: block;
+  }
+  .info_mascota .informacion .datos .izquierda span, .info_mascota .informacion .datos .derecha span {
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .info_mascota .informacion .datos .izquierda, .info_mascota .informacion .datos .derecha {
+    display: grid;
+  }
+}
+
+@media (min-width: 1030px) {
+  .info_mascota .informacion .datos .izquierda, .info_mascota .informacion .datos .derecha {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .info_mascota .informacion .datos .izquierda, .info_mascota .informacion .datos .derecha {
+    display: grid;
+  }
+}
+
+.info_mascota .informacion .datos .izquierda .anios, .info_mascota .informacion .datos .derecha .anios {
+  font-size: 3rem;
+}
+
+.info_mascota .informacion .datos .izquierda {
+  padding: 1rem 1rem 1rem 2rem;
+  border-bottom: #828282 4px solid;
+}
+
+@media (min-width: 550px) {
+  .info_mascota .informacion .datos .izquierda {
+    border-bottom: #828282 0px solid;
+  }
+}
+
+@media (min-width: 900px) {
+  .info_mascota .informacion .datos .izquierda {
+    border-bottom: #828282 4px solid;
+  }
+}
+
+@media (min-width: 1200px) {
+  .info_mascota .informacion .datos .izquierda {
+    border-bottom: #828282 0px solid;
+  }
+}
+
+.info_mascota .informacion .datos .derecha {
+  border-top: #828282 4px solid;
+  padding: 1rem 2rem 1rem 1rem;
+}
+
+@media (min-width: 550px) {
+  .info_mascota .informacion .datos .derecha {
+    border-top: #828282 0px solid;
+  }
+}
+
+@media (min-width: 900px) {
+  .info_mascota .informacion .datos .derecha {
+    border-top: #828282 4px solid;
+  }
+}
+
+@media (min-width: 1200px) {
+  .info_mascota .informacion .datos .derecha {
+    border-top: #828282 0px solid;
+  }
+}
+
+@media (min-width: 1200px) {
+  .info_mascota .informacion .datos .edad {
+    display: block;
+  }
+}
+
+.info_mascota .informacion .datos .img-tamaño {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  padding: 0;
+}
+
+.info_mascota .informacion .datos .img-tamaño .tamaño {
+  font-size: 2.8rem;
+  font-weight: 800;
+  padding: 0;
+  align-self: center;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.info_mascota .informacion .datos .img-tamaño .tipo {
+  font-size: 2.2rem;
+  color: #656565;
+  font-family: "Merienda", cursive;
+  font-weight: 500;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  text-align: end;
+  padding: 0 2rem 0 0;
+  border-bottom: #828282 3px solid;
+}
+
+.info_mascota .informacion .datos .img-tamaño .animal {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  width: 90%;
+  max-width: 12rem;
+  justify-self: right;
+}
+
+.info_mascota .informacion .datos .img-tamaño .modelo {
+  max-width: -webkit-fill-available;
+  max-height: 16rem;
+  height: auto;
+  margin: 2% 0;
+  grid-column: 2/3;
+  grid-row: 1/4;
+  border-left: #828282 5px solid;
+}
+
+.info_mascota .informacion .datos .ultimos {
+  display: grid;
+  border-left: #828282 3px solid;
+  grid-template-columns: 10rem auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 550px) {
+  .info_mascota .informacion .datos .ultimos {
+    grid-template-columns: 6rem auto;
+  }
+}
+
+@media (min-width: 550px) {
+  .info_mascota .informacion .datos .ultimos {
+    grid-template-columns: 10rem auto;
+  }
+}
+
+@media (min-width: 550px) {
+  .info_mascota .informacion .datos .ultimos {
+    grid-template-columns: 6rem auto;
+  }
+}
+
+.info_mascota .informacion .datos .ultimos .sexo {
+  -webkit-transform: rotate(-90deg);
+  grid-column: 1/2;
+  grid-row: 1/3;
+  align-self: center;
+  justify-self: center;
+  margin: revert;
+}
+
+.info_mascota .informacion .datos .ultimos .esteril, .info_mascota .informacion .datos .ultimos .vacuna {
+  margin: 1rem auto 1rem -1.4rem;
+  align-self: center;
+}
+
+.info_mascota .informacion .datos .ultimos .esteril span, .info_mascota .informacion .datos .ultimos .vacuna span {
+  font-size: 2.5rem;
+  color: #656565;
+  font-family: "Merienda", cursive;
+  font-weight: 500;
+  font-style: italic;
+}
+
+@media (min-width: 550px) {
+  .info_mascota .informacion .tercera {
+    grid-template-columns: 58% 42%;
+  }
+}
+
+@media (min-width: 900px) {
+  .info_mascota .informacion .tercera {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .info_mascota .informacion .tercera {
+    grid-template-columns: 58% 42%;
+  }
+}
+
+.info_mascota .informacion .botones .btn {
+  width: -webkit-fill-available;
+}
+
+.info_mascota .informacion .botones .btn:hover {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#64b8ff+0,54c8e5+46,64b8ff+100 */
+  background: #64b8ff;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #64b8ff 0%, #54c8e5 46%, #64b8ff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64b8ff', endColorstr='#64b8ff',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.info_mascota .mensaje {
+  padding: 4rem 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+@media (min-width: 900px) {
+  .info_mascota .mensaje {
+    grid-column: 1/3;
+  }
+}
+
+.info_mascota .mensaje .descripcion {
+  font-size: 2.5rem;
+  color: #6FABF9;
+  font-family: "Aclonica", sans-serif;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 550px) {
+  .info_mascota .mensaje .descripcion {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .info_mascota .mensaje .descripcion {
+    font-size: 3.2rem;
+  }
+}
+
+.info_mascota .mensaje p {
+  font-size: 2rem;
+  color: #656565;
+  font-family: "Merienda", cursive;
+  font-weight: 500;
+}
+
+@media (min-width: 550px) {
+  .info_mascota .mensaje p {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .info_mascota .mensaje p {
+    font-size: 2.6rem;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

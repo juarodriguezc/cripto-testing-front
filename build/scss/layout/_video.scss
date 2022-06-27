@@ -1,0 +1,73 @@
+.video {
+	// margin-bottom: 10rem;
+	z-index: 10;
+	position: relative;
+	max-height: 50rem;
+	overflow: hidden;
+	margin: 0;
+
+	.overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		@include degragado-video;
+	}
+
+	video {
+		// @include degragado-video;
+		display: block;
+		width:100%;
+		align-items: center;
+		text-align: center;
+		margin: auto;
+	}
+	video::-webkit-media-controls {
+	    display: none;
+	}
+}
+
+.contenido-video {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	justify-content: center;
+
+	@include media580 {
+		justify-content: left;
+	}
+
+	h2 {
+
+		display: flex;
+		flex-direction: column;
+		@include tipografia($Dancing, 3.3rem, white, 400);
+		align-items: center;
+		text-align: center;
+
+		span {
+			margin-top: 0.1rem;
+			// @include degradado2;
+			padding: .5rem 3rem 1.4rem 1.5rem;
+			border-radius: 10rem;
+			// @include tipografia($Shippori, 1.8rem, white);
+		}
+
+		@include media580 {
+			align-items: flex-start;
+			justify-content: left;
+			text-align: left;
+			font-size: 4rem;
+			margin-left: 5%;
+			span {
+				padding: 1rem 2rem 1.6rem 2rem;
+				// font-weight: 100;
+				font-size: 2.4rem;
+			}
+		}
+
+		@include media850 {
+			font-size: 6rem;
+		}
+		
+	}
+}

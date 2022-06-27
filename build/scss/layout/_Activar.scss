@@ -1,0 +1,9 @@
+.activacion {
+	@include degragado-azul;
+	padding: 4rem 5rem;
+	h2 {
+		@include tipografia($Gloria, 3rem, #2E4E91, 600);
+		margin-bottom: 2rem;
+
+	}
+}

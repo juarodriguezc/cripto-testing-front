@@ -1,0 +1,45 @@
+.selcion {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	// grid-gap: 2rem;
+	margin-bottom: 2rem;
+
+	.pregistro, .pingreso {
+		margin: 0 2rem;
+		padding: 3rem 2rem;
+
+	}
+
+	.informacion {
+
+		@include degragado-azul;
+		border-radius: 5rem;
+
+		.sub {
+			margin-bottom: 1rem;
+			@include tipografia($Merienda, 3.4rem, white, 600);
+		}
+	}
+
+	@include media890 {
+		grid-template-columns: repeat(2, 1fr);
+		
+		.pregistro {
+			margin: 0;
+			margin-right: 2rem;
+		}
+
+		.pingreso {
+			margin: 0;
+			margin-left: 2rem;
+		}
+	}
+
+	.flip {
+		-moz-transform: scaleX(-1); /* Firefox */
+		-o-transform: scaleX(-1); /* Opera */
+		-webkit-transform: scaleX(-1); /* Chrome y Safari */
+		transform: scaleX(-1); /* w3org */
+		filter: FlipH; /* Internet Explorer */
+	}
+}	

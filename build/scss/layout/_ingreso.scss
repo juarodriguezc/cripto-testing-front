@@ -1,0 +1,60 @@
+.centrado {
+	margin: 15% 2rem;
+	// justify-content: center;
+
+	.boton2 {
+		margin-top: 0rem;
+		margin-right: 2rem;
+		padding: 1.3rem;
+		@include tipografia($Merienda, 3rem, black, 300);
+		border: none;
+		border-radius: 3rem;
+		background-color: white;
+	}
+
+	.olvidar {
+
+		display: flex;
+		justify-content: flex-start;
+		margin: 1rem 0;
+
+		.boton3 {
+			text-decoration: underline;
+			margin: 0;
+			background-color: unset;
+			color: $morado;
+			border: none;
+			&:hover{
+				color: red;
+			}
+		}
+	}
+}
+
+.ingresar {
+	
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-rows: repeat(2, 1fr);
+	margin-top: 5rem;
+	
+	.orden {
+		display: flex;
+	}
+
+	.texto {
+		@include tipografia($Gloria, 2.5rem, white, 600);
+		margin-right: 2rem;
+	}
+
+	input {
+		// margin: auto;
+		width: 99%;
+		padding: 1rem;
+		margin: auto;
+		border-radius: 2rem;
+		border: none;
+		font-size: 2rem;
+	}
+}
+
