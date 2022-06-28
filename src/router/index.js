@@ -53,7 +53,7 @@ const routes = [
   },
   {
 
-    path: '/password/:id',
+    path: '/reset/:id',
     name: 'Password',
     component: Rpassword
   },

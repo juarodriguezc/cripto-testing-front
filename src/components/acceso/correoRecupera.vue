@@ -29,9 +29,9 @@
         Revisa tu correo...<br />
         Hemos enviado un link para que recuperes tu contraseña.
       </div>
-      <div class="alert alert-danger" role="alert" v-if="e_sent_recover">
+      <div class="alert alert-danger" role="alert" v-if="errorSentRecover">
         Error en la solicitud... <br />
-        Revisa el correo ingresado o intenta más tarde.
+        {{eSentRecoverMessage}}
       </div>
       <div class="container">
         <div class="row justify-content-end">
@@ -76,11 +76,19 @@ export default {
   },
   setup() {
     const store = useStore();
+
+    const errorSentRecover = computed(() => store.getters.errorSentRecover);
     const successSentRecover = computed(() => store.getters.successSentRecover);
+    const eSentRecoverMessage = computed(() => store.getters.eSentRecoverMessage);
+    
     const domain = process.env.VUE_APP_DOMAIN_BACK;
+    store.dispatch("restartVals");
     function recoverPassword(json) {
       store
-        .dispatch("recoverPassword", {json, domain:this.domain+"auth/sendEmailReset"})
+        .dispatch("recoverPassword", {
+          json,
+          domain: this.domain + "/auth/sendEmailReset",
+        })
         .then(() => {
           this.e_sent_recover = false;
         })
@@ -96,6 +104,8 @@ export default {
       closeBoxMsg,
       successSentRecover,
       domain,
+      errorSentRecover,
+      eSentRecoverMessage
     };
   },
   mounted() {
@@ -111,7 +121,7 @@ export default {
   methods: {
     recuperaPassword() {
       let json = {
-        username: this.email,
+        email: this.email,
       };
       this.recoverPassword(json);
     },

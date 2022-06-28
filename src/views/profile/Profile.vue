@@ -412,6 +412,7 @@ export default {
 	},
 	mounted: function () {  
         const token = localStorage.token;
+		/*
 		axios
 			.get("https://unpetlife.herokuapp.com/api/user/getUserDetails", {
 				headers: {
@@ -428,7 +429,8 @@ export default {
 					this.errorBool = true;
 				}
 			});
-		
+		*/
+		/*
 		//Consulta mis mascotas
 		axios
 			.get("https://unpetlife.herokuapp.com/api/pet/getUserPets", {
@@ -458,6 +460,7 @@ export default {
 				console.log(error)
 				this.pets ={}
 		});
+		*/
 
 	}
 };

@@ -11,17 +11,29 @@ export default createStore({
 		user: {},
 		error: false,
 		successRecoverPassword: false,
+		errorSentRecover: false,
+		eSentRecoverMessage: "",
 		passChanged: false,
+		errChangePass: false,
+		errChangeMessage: "",
 		lastLogin: null
 	},
 	mutations: {
-		restart(state){
-			state.statusMessage= "",
+		restart(state) {
+			state.statusMessage = "";
 			state.error = false;
+			state.successRecoverPassword = false;
+			state.errorSentRecover = false;
+			state.eSentRecoverMessage = "";
+			state.passChanged= false,
+			state.errChangePass = false;
+			state.errChangeMessage = "";
+		},
+		restart_change(state){
+			state.passChanged= false;
 		},
 		login_request(state) {
-			state.statusMessage = "Performing login";
-			state.passChanged = false;
+			state.statusMessage = "Performing login...";
 		},
 		login_success(state, { token, email, lastLogin }) {
 			state.token = token;
@@ -42,15 +54,24 @@ export default createStore({
 		email_sent_recover(state) {
 			state.successRecoverPassword = true;
 		},
+		error_email_sent_recover(state, { msg }) {
+			state.errorSentRecover = true;
+			state.eSentRecoverMessage = msg;
+		},
 		goback_recover(state) {
 			state.successRecoverPassword = false;
 		},
-		change_password(state) {
+		change_password(state){
 			state.passChanged = true;
-		}
+			alert("Contraseña actualizada exitosamente")
+		},
+		error_change_password(state, { msg }) {
+			state.errChangePass = true;
+			state.errChangeMessage = msg;
+		},
 	},
 	actions: {
-		restartVals({ commit }){
+		restartVals({ commit }) {
 			commit("restart");
 		},
 		login({ commit }, data) {
@@ -67,22 +88,22 @@ export default createStore({
 						data: data.json,
 						method: "POST",
 					})
-					.then((response) => {
-						const token = response.data.token;
-						const email = response.data.email;
-						const lastLogin = response.data.lastLogin;
-						localStorage.setItem("token", token);
-						axios.defaults.headers.common["Authorization"] = 'Bearer ' + token;
-						commit("login_success", { token, email, lastLogin });
-						resolve(response);
+						.then((response) => {
+							const token = response.data.token;
+							const email = response.data.email;
+							const lastLogin = response.data.lastLogin;
+							localStorage.setItem("token", token);
+							axios.defaults.headers.common["Authorization"] = 'Bearer ' + token;
+							commit("login_success", { token, email, lastLogin });
+							resolve(response);
 
-					})
-					.catch((error) => {
-						const errorMsg = error.response.data.message.toString();
-						commit("default_error", errorMsg);
-						localStorage.removeItem("token");
-						reject(error);
-					})
+						})
+						.catch((error) => {
+							const errorMsg = error.response.data.message.toString();
+							commit("default_error", errorMsg);
+							localStorage.removeItem("token");
+							reject(error);
+						})
 				}
 			});
 		},
@@ -99,8 +120,8 @@ export default createStore({
 		recoverPassword({ commit }, data) {
 			//console.log(json)
 			return new Promise((resolve, reject) => {
+				commit("restart");
 				axios({
-					//url: "http://localhost:8080/api/passrecover/sendLink/"+json.username,
 					url: data.domain,
 					data: data.json,
 					method: "POST",
@@ -111,6 +132,7 @@ export default createStore({
 						resolve(response);
 					})
 					.catch((error) => {
+						commit("error_email_sent_recover", { msg: error.response.data.message.toString() });
 						reject(error);
 					})
 			})
@@ -122,25 +144,24 @@ export default createStore({
 			});
 		},
 		//Cambiar contraseña
-		changePassword({ commit }, json) {
+		changePassword({ commit }, data) {
 			//console.log(json)
 			return new Promise((resolve, reject) => {
-
-
+				commit("restart");
 				axios({
 					//url: "http://localhost:8080/api/passrecover/changePassword",
-					url: "https://unpetlife.herokuapp.com/api/passrecover/changePassword",
-					data: json,
+					url: data.domain,
+					data: data.json,
 					method: "PUT",
 				})
-					.then((response) => {
-						commit("change_password");
-						//console.log("Contraseña cambiada");
-						resolve(response);
-					})
-					.catch((error) => {
-						reject(error);
-					})
+				.then((response) => {
+					commit("change_password");
+					resolve(response);
+				})
+				.catch((error) => {
+					commit("error_change_password", { msg: error.response.data.message.toString() });
+					reject(error);
+				})
 
 			})
 		},
@@ -152,7 +173,11 @@ export default createStore({
 		errorBoolean: state => state.error,
 		recoverStatus: state => state.messageRecover,
 		successSentRecover: state => state.successRecoverPassword,
-		successChangedPass: state => state.passChanged,
+		errorSentRecover: state => state.errorSentRecover,
+		eSentRecoverMessage: state => state.eSentRecoverMessage,
+		passChanged: state => state.passChanged,
+		errChangePass: state => state.errChangePass,
+		errChangeMessage: state => state.errChangeMessage,
 		lastLogin: state => state.lastLogin,
 	},
 	modules: {

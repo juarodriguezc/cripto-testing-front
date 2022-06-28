@@ -505,7 +505,7 @@
           <div class="cboton">
             <button
               class="btn btn-lg button_adopta"
-              v-on:click="verInfo(mascota.id)"
+              v-on:click="verInfo(mascota.idPet)"
             >
               Ver más
             </button>
@@ -890,7 +890,6 @@ export default {
       this.noResult = false;
       this.tranformToParam();
       this.pagina = this.$route.params.idPage;
-      this.Listamascota = pets;
       /*
       axios
         .get(
@@ -943,7 +942,7 @@ export default {
       while (document.querySelector(".rojo") != null) {
         document.querySelector(".rojo").classList.remove("rojo");
       }
-
+      /*
       axios
         .get(
           "https://unpetlife.herokuapp.com/api/pet/consultaFil?page=0" +
@@ -955,6 +954,7 @@ export default {
           this.Listamascota = data.data.content;
           this.totalPages = data.data.totalPages;
         });
+        */
     },
   },
   mounted: function () {
@@ -966,6 +966,7 @@ export default {
     this.esteril = this.params.esteril;
     this.mascota = this.params.mascota;
     this.peso = this.params.peso;
+    this.Listamascota = pets;
 
     this.filtrar();
   },

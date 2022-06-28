@@ -43,7 +43,6 @@
         >
           Contraseña actualizada correctamente!
         </div>
-
         <div class="texto_derecha">
           <button
             type="button"
@@ -87,8 +86,9 @@ export default {
     const errorMsg = computed(() => store.getters.authStatus);
     const errorB = computed(() => store.getters.errorBoolean);
     const loggedIn = computed(() => store.getters.isLoggedIn);
-    const passChanged = computed(() => store.getters.successChangedPass);
+    const passChanged = computed(() => store.getters.passChanged);
     const domain = process.env.VUE_APP_DOMAIN_BACK;
+
     store.dispatch("restartVals");
     function login(json) {
       store
@@ -124,7 +124,6 @@ export default {
     async recaptcha() {
       await this.$recaptchaLoaded();
       const token = await this.$recaptcha("login");
-      console.log({ token });
       if(token){
         return true;
       }else{

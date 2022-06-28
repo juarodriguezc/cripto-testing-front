@@ -16,9 +16,10 @@
 							name=""
 							type="password" 
 							maxlength="20"
-							placeholder="Password" 
+							placeholder="Contraseña"
+							v-model="password"
 							id="pass" 
-							v-model="Contraseña">
+							>
 						<div class="error_msg_change_password" v-if="e_password" >Contraseña muy corta  </div>
 					</div>
 					<div class="contraseña">
@@ -29,15 +30,17 @@
 							name=""
 							type="password" 
 							maxlength="20"
-							placeholder="Password" 
+							placeholder="Repetir contraseña" 
 							id="repit" 
-							v-model="Repetir">
+							>
 						<div class="error_msg_change_password"  v-if="e_repetir" >Las contraseñas no son iguales</div>
 					</div>
 					<br>
 					<br>
-					<div class="alert alert-danger" role="alert" v-if="e_put_password">
-						Error en la solicitud, intenta más tarde.
+					<div class="alert alert-danger" role="alert" v-if="errChangePass">
+						Error en la solicitud...
+						<br/>
+						{{errChangeMessage}}
 					</div>
 
 
@@ -65,22 +68,31 @@
 import navbar from "@/components/navbar"
 import axios from 'axios';
 import { useStore } from 'vuex'
+import { computed } from "vue";
 
 export default {
     name: "Password",
 	setup(){
-        const store = useStore()
-        function changePassword(data){
-            store.dispatch("changePassword", data)
+        const store = useStore();
+
+		const errChangePass = computed(() => store.getters.errChangePass);
+		const errChangeMessage = computed(() => store.getters.errChangeMessage);
+
+		const domain = process.env.VUE_APP_DOMAIN_BACK;
+        function changePassword(json){
+            store.dispatch("changePassword", {json,domain:this.domain+"/auth/resetPassword"})
             .then(() => {
                 this.$router.push('/login');
             })
             .catch(err => {
-                this.e_put_password = true;
+                
             })
         }
         return{
             changePassword,
+			domain,
+			errChangePass,
+			errChangeMessage,
         }        
     },
     data(){
@@ -93,6 +105,7 @@ export default {
 			e_repetir:false,
 			//errores con axios
 			e_put_password:false,
+			password: "",
         }
     },
     components:{
@@ -108,9 +121,8 @@ export default {
 			if (this.paso()) {
 				const json ={
 					"token" : this.token_r,
-					"password" : this.Contraseña
-				}
-				// console.log(json)
+					"newPassword" : this.password
+				}				
 				this.changePassword(json);
 			}
 		},
