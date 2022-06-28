@@ -4,7 +4,7 @@
         <div class="selcion">
             <div class="informacion pingreso">
                 <menuLogin v-if="!popupTriggers.menu_recupera" :TogglePopup = "()=>TogglePopup('menu_recupera')"/> 
-                <correoRecupera v-if="popupTriggers.menu_recupera" :TogglePopup = "()=>TogglePopup('menu_recupera')"/> 
+                <correoRecupera v-else :TogglePopup = "()=>TogglePopup('menu_recupera')"/> 
             </div>
             <img 
                 class="flip" 

@@ -1,6 +1,6 @@
 <template>
   <main class="form-login">
-    <form v-on:submit.prevent="login2">
+    <form>
       <h2 class="texto_centrado sub">Ingreso</h2>
       <div class="centrado">
         <div class="ingresar">
@@ -46,9 +46,9 @@
 
         <div class="texto_derecha">
           <button
-            @click="IngresaUsuario"
+            type="button"
+            v-on:click="IngresaUsuario"
             class="boton2"
-            type="submit"
             data-paso="1"
           >
             Acceder
@@ -58,7 +58,7 @@
           <button
             @click="TogglePopup()"
             class="boton3"
-            type="submit"
+            type="button"
             data-paso="4"
           >
             ¿Has olvidado tu contraseña?

@@ -77,9 +77,10 @@ export default {
   setup() {
     const store = useStore();
     const successSentRecover = computed(() => store.getters.successSentRecover);
-    function recoverPassword(data) {
+    const domain = process.env.VUE_APP_DOMAIN_BACK;
+    function recoverPassword(json) {
       store
-        .dispatch("recoverPassword", data)
+        .dispatch("recoverPassword", {json, domain:this.domain+"auth/sendEmailReset"})
         .then(() => {
           this.e_sent_recover = false;
         })
@@ -94,6 +95,7 @@ export default {
       recoverPassword,
       closeBoxMsg,
       successSentRecover,
+      domain,
     };
   },
   mounted() {

@@ -96,14 +96,13 @@ export default createStore({
 			});
 		},
 		//Recuperar contraseña
-		recoverPassword({ commit }, json) {
+		recoverPassword({ commit }, data) {
 			//console.log(json)
 			return new Promise((resolve, reject) => {
 				axios({
 					//url: "http://localhost:8080/api/passrecover/sendLink/"+json.username,
-					url: "https://unpetlife.herokuapp.com/api/passrecover/sendLink/" + json.username,
-
-					data: json,
+					url: data.domain,
+					data: data.json,
 					method: "POST",
 				})
 					.then((response) => {
