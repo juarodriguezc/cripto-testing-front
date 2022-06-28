@@ -54,6 +54,7 @@
             Acceder
           </button>
         </div>
+
         <div class="olvidar">
           <button
             @click="TogglePopup()"
@@ -72,6 +73,7 @@
 <script>
 import { useStore } from "vuex";
 import { computed } from "vue";
+import { useReCaptcha } from "vue-recaptcha-v3";
 
 export default {
   name: "menuLogin",
@@ -79,6 +81,8 @@ export default {
     TogglePopup: Function,
   },
   setup() {
+
+    const { executeRecaptcha, recaptchaLoaded } = useReCaptcha();
     const store = useStore();
     const errorMsg = computed(() => store.getters.authStatus);
     const errorB = computed(() => store.getters.errorBoolean);
@@ -105,12 +109,28 @@ export default {
   },
   methods: {
     IngresaUsuario() {
+      let robot = this.recaptcha(); 
+      if(!robot){
+        console.log("Es usted un robot");
+        return -1;
+      }
+
       let json = {
         username: this.email,
         password: this.password,
       };
       this.login(json);
     },
+    async recaptcha() {
+      await this.$recaptchaLoaded();
+      const token = await this.$recaptcha("login");
+      console.log({ token });
+      if(token){
+        return true;
+      }else{
+        return false;
+      }
+    }
   },
 };
 </script>
